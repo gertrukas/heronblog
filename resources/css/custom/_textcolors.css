@@ -1,0 +1,26 @@
+.text-yellow {
+    @apply text-yellow-400 font-semibold;
+}
+
+.text-blue {
+    @apply text-blue-400 font-semibold;
+}
+
+.text-green {
+    @apply text-green-400 font-semibold;
+}
+
+.text-red-dark {
+    @apply text-red-600 font-semibold;
+}
+
+.text-red {
+    @apply text-red-500 font-semibold;
+}
+
+.text-gray {
+    @apply text-gray-500 font-semibold;
+}
+.collapse {
+    visibility: visible;
+}

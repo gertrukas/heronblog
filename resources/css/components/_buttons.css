@@ -1,0 +1,22 @@
+.btn-yellow {
+    @apply bg-yellow-400 text-white ;
+}
+.btn-blue {
+    @apply bg-blue-400 text-white ;
+}
+.btn-green {
+    @apply bg-green-400 text-white ;
+}
+/* .btn-red {
+    @apply bg-red-500 text-white ;
+} */
+.btn-red-dark {
+    @apply bg-red-600 text-white ;
+}
+
+.btn-red{
+    @apply bg-red-500 text-white px-2 py-1 rounded-md;
+}
+.btn-gray{
+    @apply bg-gray-500 text-white px-2 py-1 rounded-md;
+}

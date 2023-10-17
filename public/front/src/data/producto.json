@@ -1,0 +1,16 @@
+{
+  "data": {
+    "id": 1,
+    "categoria_id": 1,
+    "url_amazon": "https://www.amazon.com.mx",
+    "url_book": "ciclos-sxx4",
+    "nombre": "Ciclos",
+    "autor": "Juan manuel de drodigues caamaño",
+    "descripcion": "ciclos una novela interesante, que te hara reflexionar sobre la vida",
+    "precio": 100,
+    "unidades": 1,
+    "created_at": "2022-10-10 00:00:00",
+    "updated_at": "2022-10-10 00:00:00",
+    "url_imagen": "/../public/img/books/ciclos.jpg"
+  }
+}

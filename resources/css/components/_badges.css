@@ -1,0 +1,18 @@
+.badge-yellow {
+    @apply border-yellow-400 text-yellow-500 ;
+}
+.badge-blue {
+    @apply border-blue-400 text-blue-400 ;
+}
+.badge-purple {
+    @apply border-purple-400 text-purple-400 ;
+}
+.badge-green {
+    @apply border-green-400 text-green-400 ;
+}
+.badge-red {
+    @apply border-red-500 text-red-400 ;
+}
+.badge-red-dark {
+    @apply border-red-600 text-red-400 ;
+}

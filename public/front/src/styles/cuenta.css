@@ -1,0 +1,253 @@
+:root {
+  --first-color: #197fd3;
+  --first-color-alt: #0f74c7;
+  --title-color: #22272b;
+  --text-color: #657481;
+  --text-color-light: #bac0c4;
+  --text-color-lighten: #e4e4e4;
+  --body-color: #fafdff;
+  --container-color: #fff;
+  --transition-03: 0.3s ease all;
+}
+
+/*===== cuenta ===== */
+.cuenta {
+  width: 100%;
+}
+.cuenta__contenedor {
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px;
+}
+/*===== usuario ===== */
+.usuario {
+  width: fit-content;
+  margin: 0 auto;
+  padding-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.usuario__logo {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border: 4px solid var(--first-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.usuario__img {
+  width: 125px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    var(--first-color) 0%,
+    var(--container-color, 0.2) 100%
+  );
+}
+.usuario__nombre {
+  font-size: 28px;
+  font-family: 500;
+  color: var(--title-color);
+  text-align: center;
+}
+.usuario__texto {
+  font-size: 16px;
+  text-align: center;
+}
+/*===== items ===== */
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  text-align: center;
+}
+.items__item {
+  width: fit-content;
+}
+.items__bold {
+  color: var(--title-color);
+  font-size: 16px;
+  font-weight: 700;
+}
+.items__texto {
+  font-size: 14px;
+  font-weight: 500;
+}
+/*===== botones ===== */
+.botones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.boton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+  text-align: center;
+  gap: 12px;
+  background: var(--first-color);
+  color: #fff;
+  border-radius: 10px;
+  transition: var(--transition-03);
+  font-weight: 600;
+}
+.boton svg {
+  min-width: 20px;
+  min-height: 20px;
+  width: 20px;
+  height: 20px;
+}
+.boton:hover {
+  background: var(--first-color-alt);
+}
+.botones__rigth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.botones__rigth svg {
+  min-width: 20px;
+  min-height: 20px;
+  width: 20px;
+  height: 20px;
+}
+.boton--bg {
+  width: 40px;
+  height: 40px;
+  color: var(--title-color);
+  font-weight: 500;
+  background: var(--text-color-lighten);
+}
+.boton--bg:hover {
+  background: var(--text-color-light);
+}
+/*===== navegacion ===== */
+.navegacion {
+  width: 80%;
+  background: var(--text-color-lighten);
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.navegacion__boton {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--title-color);
+  background: transparent;
+  transition: var(--transition-03);
+}
+.navegacion__boton.active {
+  background: var(--container-color);
+}
+.navegacion__boton:hover {
+  background: var(--container-color);
+}
+.contenedor__contenido {
+  padding: 20px;
+}
+.pendientes {
+  display: block;
+}
+.entregados {
+  display: none;
+}
+.contenedor__contenido.active .pendientes {
+  display: none;
+}
+.contenedor__contenido.active .entregados {
+  display: block;
+}
+.cuenta_editar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-03);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  overflow: auto;
+}
+.cuenta_editar.open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+}
+.cuenta_editar .formulario {
+  width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--body-color);
+  border: var(--border);
+  position: relative;
+}
+#cerrar-cuenta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px;
+  color: var(--text-color);
+}
+@media (max-width: 750px) {
+  .cuenta__contenedor,
+  .navegacion,
+  .navegacion__boton {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .cuenta_editar .formulario {
+    width: 400px;
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .navegacion {
+    display: block;
+  }
+  .cuenta_editar .formulario {
+    width: 330px;
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .items {
+    gap: 25px;
+  }
+}
+@media (max-width: 280px) {
+  .navegacion {
+    flex-direction: column;
+  }
+}

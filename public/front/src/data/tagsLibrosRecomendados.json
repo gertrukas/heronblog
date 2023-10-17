@@ -1,0 +1,124 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "categoria_id": 1,
+      "url_amazon": "https://www.amazon.com.mx",
+      "url_book": "ciclos-sxx4",
+      "nombre": "Ciclos",
+      "precio": 100,
+      "unidades": 1,
+      "url_imagen": "/../public/img/books/ciclos.jpg"
+    },
+    {
+      "id": 2,
+      "categoria_id": 1,
+      "url_amazon": "https://www.amazon.com.mx",
+      "url_book": "eclipse-23s",
+      "nombre": "Eclipse",
+      "precio": 100,
+      "unidades": 3,
+      "url_imagen": "/../public/img/books/eclipse.jpeg"
+    },
+    {
+      "id": 3,
+      "categoria_id": 1,
+      "url_amazon": "https://www.amazon.com.mx",
+      "url_book": "manchas-2233s",
+      "nombre": "Manchas",
+      "precio": 100,
+      "unidades": 3,
+      "url_imagen": "/../public/img/books/manchas.jpeg"
+    },
+    {
+      "id": 3,
+      "categoria_id": 1,
+      "url_amazon": "https://www.amazon.com.mx",
+      "url_book": "psicofaire-3s3s",
+      "nombre": "Psicofaire",
+      "precio": 100,
+      "unidades": 3,
+      "url_imagen": "/../public/img/books/psicofaire.jpeg"
+    },
+    {
+      "id": 1,
+      "categoria_id": 2,
+      "url_book": "127-3as",
+      "url_amazon": "https://www.amazon.com.mx",
+      "nombre": "127",
+      "precio": 100,
+      "unidades": 3,
+      "url_imagen": "/../public/img/stories/127.jpeg"
+    },
+    {
+      "id": 2,
+      "categoria_id": 2,
+      "url_book": "coatza-gs3as",
+      "url_amazon": "https://www.amazon.com.mx",
+      "nombre": "Coatza",
+      "precio": 100,
+      "unidades": 3,
+      "url_imagen": "/../public/img/stories/coatza.jpeg"
+    },
+    {
+      "id": 3,
+      "categoria_id": 2,
+      "url_book": "flatulencia-a3as",
+      "url_amazon": "https://www.amazon.com.mx",
+      "nombre": "Flatulencia",
+      "precio": 100,
+      "unidades": 3,
+      "url_imagen": "/../public/img/stories/flatulencia.jpeg"
+    },
+    {
+      "id": 4,
+      "categoria_id": 2,
+      "url_book": "yelenia-sr3sas",
+      "url_amazon": "https://www.amazon.com.mx",
+      "nombre": "Yelenia",
+      "precio": 100,
+      "unidades": 3,
+      "url_imagen": "/../public/img/stories/yelenia.jpg"
+    },
+    {
+      "id": 1,
+      "categoria_id": 3,
+      "url_book": "marketing-3s2as",
+      "url_amazon": "https://www.amazon.com.mx",
+      "nombre": "marketing",
+      "precio": 100,
+      "unidades": 0,
+      "url_imagen": "/../public/img/academics/marketing.jpeg"
+    },
+    {
+      "id": 2,
+      "categoria_id": 3,
+      "url_book": "merca-g2s3as",
+      "url_amazon": "https://www.amazon.com.mx",
+      "nombre": "merca",
+      "precio": 100,
+      "unidades": 3,
+      "url_imagen": "/../public/img/academics/merca.jpeg"
+    },
+    {
+      "id": 3,
+      "categoria_id": 3,
+      "url_book": "revertir-aa3as",
+      "url_amazon": "https://www.amazon.com.mx",
+      "nombre": "Revertir",
+      "precio": 100,
+      "unidades": 3,
+      "url_imagen": "/../public/img/academics/revertir.jpeg"
+    },
+    {
+      "id": 4,
+      "categoria_id": 3,
+      "url_book": "riesgo-sr13sas",
+      "url_amazon": "https://www.amazon.com.mx",
+      "nombre": "Riesgo",
+      "precio": 100,
+      "unidades": 3,
+      "url_imagen": "/../public/img/academics/riesgo.jpeg"
+    }
+  ]
+}
