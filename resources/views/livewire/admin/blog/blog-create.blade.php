@@ -20,7 +20,7 @@
                 <div class="form-check form-switch w-full mb-4">
                     <label class="form-check-label ml-0" for="show-example-1">No</label>
                     <input id="show-example-1" wire:model.defer="active" data-target="#basic-button"
-                        class="show-code form-check-input mr-0 ml-3" type="checkbox">
+                        class="show-code form-check-input mr-0 ml-3" type="checkbox" value="{{$active}}">
                     <label class="form-check-label ml-2" for="show-example-1">Si</label>
                 </div>
 

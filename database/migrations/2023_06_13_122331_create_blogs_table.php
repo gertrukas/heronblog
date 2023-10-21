@@ -20,10 +20,9 @@ return new class extends Migration
             $table->string('intro');
             $table->text('description');
             $table->string('author');
-            $table->string('active');
+            $table->boolean('active')->nullable();
             $table->string('image')->nullable();
             $table->string('post_type')->nullable();
-            $table->string('date')->nullable();
             $table->foreignId('category_id')->nullable()->constrained();
             $table->softDeletes();
             $table->timestamps();

@@ -26,7 +26,7 @@ class BlogCreate extends Component
     public $name;
     public $slug;
     public $intro;
-    public $active =  false;
+    public $active =  0;
     public $author;
     public $description = '';
     public $image;
@@ -92,7 +92,16 @@ class BlogCreate extends Component
         $this->blog->slug = $this->createUniqueSlug($this->name);
 
         if ($this->image) {
-            $this->blog->image =  $this->image->store('', 'image');
+                // Genera un slug para el archivo
+        $slug = $this->generateSlug($this->image->getClientOriginalName());
+
+        // Agrega un conjunto aleatorio de 3 números
+        $randomNumbers = random_int(100, 999);
+        $slugWithRandom = $slug . '-' . $randomNumbers;
+
+        // Almacena la imagen en la carpeta correspondiente
+        $this->image->storeAs("", $slugWithRandom . '.' . $this->image->getClientOriginalExtension(), 'image');
+        $this->blog->image = $slugWithRandom . '.' . $this->image->getClientOriginalExtension();
         }
 
         $this->blog->name = $this->name;
@@ -100,6 +109,7 @@ class BlogCreate extends Component
         $this->blog->active = $this->active;
         $this->blog->category_id = $this->category_id;
         $this->blog->description = $this->description;
+        $this->blog->post_type = 'post';
         $this->blog->author = $this->author;
 
 
@@ -114,6 +124,13 @@ class BlogCreate extends Component
 
 
         return redirect()->route('admin.blogs');
+    }
+
+    private function generateSlug($originalName)
+    {
+        // Implementa la lógica para generar un slug único
+        // por ejemplo, usando Str::slug() de Laravel
+        return \Illuminate\Support\Str::slug(pathinfo($originalName, PATHINFO_FILENAME));
     }
 
 

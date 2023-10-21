@@ -19,7 +19,6 @@ class Blog extends Model
         'active',
         'image',
         'post_type',
-        'date',
         'category_id',
     ];
 

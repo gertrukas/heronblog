@@ -24,8 +24,8 @@ class BlogController extends Controller
     public function show($slug)
     {
 
-        $blogAside = Blog::inRandomOrder()->limit(3)->get();
-        $blog = Blog::where('slug', '=', $slug)->firstOrFail();
+        $blogAside = Blog::where('active', 1)->inRandomOrder()->limit(3)->get();
+        $blog = Blog::where('active', 1)->where('slug', '=', $slug)->firstOrFail();
         return view('front.blog.show', compact('blog', 'blogAside'));
     }
 }

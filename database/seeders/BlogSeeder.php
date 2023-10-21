@@ -29,7 +29,7 @@ class BlogSeeder extends Seeder
                 'slug' => $blog['slug'],
                 'intro' => $blog['intro'],
                 'description' => $blog['description'],
-                'date' => $blog['date']['$date'],
+                'created_at' => $blog['date']['$date'],
                 'post_type' => $blog['post_type'] ?? 'post',
                 'active' => $blog['active'],
                 'image' => $blog['image'] ?? null,
