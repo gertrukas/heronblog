@@ -2,8 +2,6 @@
 window.initializeCkEditor = () => {
     if (document.querySelector('.uploadUrl')) {
 
-
-
         ClassicEditor.create(document.getElementById("editor"), {
     
             language: 'es',
@@ -21,6 +19,7 @@ window.initializeCkEditor = () => {
                     'alignment', '|',
                     'link', 'blockQuote', 'insertTable',  '|',
                     '|',  
+                    'mediaEmbed',
                      'upload', // three
                     'flmngr', // buttons
                     'imgpen'  // of Flmngr
@@ -147,4 +146,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
     initializeCkEditor();
 })
-

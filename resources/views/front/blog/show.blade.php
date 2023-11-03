@@ -12,32 +12,13 @@
 
 <body>
 
-    <!-- component -->
-    <!-- component -->
     <div>
-        <nav class="sticky top-0 z-50">
-            <div>
-                <div class="w-full bg-yellow-500  opacity-90 h-20 flex justify-between ">
-                    <div class="w-full lg:w-30/6 xl:w-full  h-full flex items-center px-4 ">
-
-                        <a href="/" class="text-white text-2xl font-semibold"> Inicio</a>
-                    </div>
-
-
-                
-                </div>
-            </div>
-        </nav>
-
-
-
+        
+        <livewire:front.home.search-component >
 
         <div class=" bg-yellow-500 w-full h-16 text-white flex justify-start items-center  px-10">
             <p>Publicación / {{ $blog->name }} </p>
         </div>
-
-
-
 
         <main class="container px-4 mx-auto  bg-white">
             <section class="w-full flex flex-col lg:flex-row gap-8">

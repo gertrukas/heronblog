@@ -7,12 +7,7 @@
     <!--=============== intro ===============-->
 
     <section class="intro">
-
        <livewire:front.blog.blog-list  />
-        
-
- 
-       
     </section>
 
 </main>

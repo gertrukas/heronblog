@@ -50,7 +50,20 @@ class UserSeeder extends Seeder
 
         $user->assignRole('Super Administrador');
 
-  
+        $user =  User::create([
+            'name' => 'Herón Pazzi',
+            'email' => 'heronpazzi@gmail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('Schatzi2023'), // password
+            'photo' => null,
+            'phone' => 4421049006,
+            'web' => 1,
+            'api' => 1,
+            'active' => 1,
+            'remember_token' => Str::random(10)
+        ]);
+
+        $user->assignRole('Super Administrador');
 
     }
 }

@@ -17,6 +17,7 @@ class BlogList extends Component
     public function render()
     {
         $blogs =  Blog::where('active', 1)->paginate(10);
+        
         return view('livewire.front.blog.blog-list', compact('blogs'));
     }
 }

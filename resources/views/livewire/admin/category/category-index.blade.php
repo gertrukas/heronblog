@@ -68,9 +68,6 @@
                                         {{ $row->slug }}</span>
                                 </x-table.cell>
 
-                            
-
-
                                 <x-table.cell class="text-left">
                                     {{ $row->created_at->format('d-M-Y') }}
                                 </x-table.cell>

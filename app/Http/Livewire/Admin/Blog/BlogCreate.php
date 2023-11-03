@@ -68,7 +68,6 @@ class BlogCreate extends Component
 
     public function save()
     {
-
         if ( $this->action == 'Crear Blog') {
             $this->validate([
                 'name' => 'required',
@@ -86,22 +85,19 @@ class BlogCreate extends Component
             ]);
         }
         
-     
-
-
         $this->blog->slug = $this->createUniqueSlug($this->name);
 
         if ($this->image) {
-                // Genera un slug para el archivo
-        $slug = $this->generateSlug($this->image->getClientOriginalName());
+            // Genera un slug para el archivo
+            $slug = $this->generateSlug($this->image->getClientOriginalName());
 
-        // Agrega un conjunto aleatorio de 3 números
-        $randomNumbers = random_int(100, 999);
-        $slugWithRandom = $slug . '-' . $randomNumbers;
+            // Agrega un conjunto aleatorio de 3 números
+            $randomNumbers = random_int(0, 99);
+            $slugWithRandom = $slug . '-' . $randomNumbers;
 
-        // Almacena la imagen en la carpeta correspondiente
-        $this->image->storeAs("", $slugWithRandom . '.' . $this->image->getClientOriginalExtension(), 'image');
-        $this->blog->image = $slugWithRandom . '.' . $this->image->getClientOriginalExtension();
+            // Almacena la imagen en la carpeta correspondiente
+            $this->image->storeAs("", $slugWithRandom . '.' . $this->image->getClientOriginalExtension(), 'image');
+            $this->blog->image = $slugWithRandom . '.' . $this->image->getClientOriginalExtension();
         }
 
         $this->blog->name = $this->name;
@@ -112,16 +108,11 @@ class BlogCreate extends Component
         $this->blog->post_type = 'post';
         $this->blog->author = $this->author;
 
-
-      
         $this->blog->save();
 
         $this->blog->tags()->sync($this->tag);
 
         $this->showSuccess('Se guardo correctamente');
-
-
-
 
         return redirect()->route('admin.blogs');
     }

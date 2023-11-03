@@ -10,7 +10,7 @@
                     {{ $blog->name }}
                 </h3>
                 <p class="text-gray-500 text-left">
-                    {{ $blog->date ? changeFormatDateApp($blog->date)->format('Y-m-d') : changeFormatDateApp($blog->created_at)->format('Y-m-d') }}
+                   {{ $blog->date ? changeFormatDateApp($blog->date)->format('d-M-Y') : changeFormatDateApp($blog->created_at)->format('d-M-Y') }}
                 </p>
                 <p class="text-left">
                     {!! $blog->intro !!}

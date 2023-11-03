@@ -6,32 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    
 </head>
 
 <body>
 
-    <!-- component -->
-    <!-- component -->
     <div>
-
-                 
-                        
-                        <livewire:front.home.search-component >
-                      
             
-
-                       
-                   
-
-
-   
-
-  
-
+        <livewire:front.home.search-component>
+          
         <header class="relative overflow-hidden text-ybg-yellow-500 rounded-lg sm:mx-16 mx-2 sm:py-16">
-      
+                <p class="-err">baner</p>
         </header>
 
 
@@ -43,8 +30,7 @@
 
         <h1 class="text-center text-2xl sm:text-5xl py-10 font-medium"> Publicaciónes recientes </h1>
         <div class="container mx-auto">
-
-            <livewire:front.home.lasted-post />
+           <!-- <livewire:front.home.lasted-post /> -->
         </div>
 
         <footer class="text-center">

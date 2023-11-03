@@ -24,14 +24,9 @@
                         <x-table.th class="text-left" wire:click="sortBy('id')" :state="$this->sortingState">
                             Titulo
                         </x-table.th>
-
-
-
-
                         <x-table.th class="text-left" wire:click="sortBy('id')" :state="$this->sortingState">
                             Fecha de creación
                         </x-table.th>
-
 
                         <x-table.th class="text-left">Acciones</x-table.th>
                     </x-slot>
@@ -41,17 +36,13 @@
                             <x-table.row wire:loading.class.delay="opacity-50" wire:key="row-{{ $row->id }}">
 
                                 <x-table.cell class="text-center">
-                                    <img src="{{ asset('uploads/' . $row->image) }}" class="w-10 h-10" alt="">
+                                    <img src="{{ asset('uploads/' . $row->image) }}" class="w-20 h-20" alt="">
                                 </x-table.cell>
                                 <x-table.cell class="text-left">
                                     <a href="{{ route('admin.blogs.create', $row->id) }}">
                                         {{ $row->name }}
                                     </a>
-
                                 </x-table.cell>
-
-
-
 
 
                                 <x-table.cell class="text-left">
