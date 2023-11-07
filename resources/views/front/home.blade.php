@@ -8,41 +8,35 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
     <script src="https://cdn.tailwindcss.com"></script>
-    
 </head>
 
 <body>
 
-    <div>
+  
+        @include('includes.header')
+
+        <div class="flex items-center justify-center p-2">
+            <a href="/" class="content-center"><img src="{{asset('images/banner/master-class-gratuita.jpg')}}"></a>
+        </div>
+       
+        <div class="relative flex flex-col items-center  bg-slate-500">
             
-        <livewire:front.home.search-component>
-          
-        <header class="relative overflow-hidden text-ybg-yellow-500 rounded-lg sm:mx-16 mx-2 sm:py-16">
-                <p class="-err">baner</p>
-        </header>
+                <img src="{{asset('images/fb.jpg')}}" class="object-fill w-100" />
+            
+        </div>
 
-
-        <div class=" bg-yellow-500 w-full h-16 text-white flex justify-start items-center  px-10">
+        <div class=" bg-blue-500 w-full h-16 text-white flex justify-start items-center  px-10">
             Inicio
         </div>
-
-
-
+        
         <h1 class="text-center text-2xl sm:text-5xl py-10 font-medium"> Publicaciónes recientes </h1>
         <div class="container mx-auto">
-           <!-- <livewire:front.home.lasted-post /> -->
+           <livewire:front.home.lasted-post />
         </div>
 
-        <footer class="text-center">
-            <hr />
-            <p class="text-center py-5">Crafted with ❤️ by <span class="font-black">
-                    
-                </span></p>
-        </footer>
-
-
+        @include('includes.footer')
        
-    </div>
+    
     <!--=============== js ===============-->
     <livewire:scripts />
 </body>

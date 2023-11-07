@@ -99,6 +99,4 @@
     <x-modal-delete id="delete-modal-category" message="Está acción eliminara un Post" />
 
 
-
-
 </div>
