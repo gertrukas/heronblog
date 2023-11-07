@@ -160,13 +160,11 @@ class BlogIndex extends Component
 
         foreach ($categories->get() as $category) {
 
-
             $data['rows'][] = [
                 $category->name,
                 $category->type,
                 $category->status ? 'Activado' : 'Desactivado',
                 $category->created_at,
-
             ];
         }
 

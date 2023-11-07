@@ -16,7 +16,12 @@ module.exports = {
     theme: {
         extend: {
             colors: {
+                'P60': '#ffffff',
+                'P30': '#50a0e2',
+                'P10': '#F880D4',
+                'titulo': '#145da0',
                 rgb: toRGB({
+                    
                     inherit: colors.inherit,
                     current: colors.current,
                     transparent: colors.transparent,
@@ -59,7 +64,8 @@ module.exports = {
                             700: '#0F274B',
                             800: '#0D203D',
                             900: '#0A1930',
-                    }
+                    },
+                    
                 }),
                 primary: withOpacityValue("--color-primary"),
                 secondary: withOpacityValue("--color-secondary"),
@@ -127,5 +133,6 @@ module.exports = {
             require('postcss-advanced-variables')()
           ]
         }
-      }
+      },
+      
 };

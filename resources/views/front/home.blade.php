@@ -2,47 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
-    <script src="https://cdn.tailwindcss.com"></script>
+    @include('includes.head')
+    
+
     
 </head>
 
-<body>
+<body class="p-0 bg-white">
 
-    <div>
-            
-        <livewire:front.home.search-component>
-          
-        <header class="relative overflow-hidden text-ybg-yellow-500 rounded-lg sm:mx-16 mx-2 sm:py-16">
-                <p class="-err">baner</p>
-        </header>
+        
+        @include('includes.header')
+        <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
+        <!---- banner ------>
+            <div class="flex items-center justify-center p-2">
+                <a href="/" class="content-center"><img src="{{asset('images/banner/master-class-gratuita.jpg')}}"></a>
+            </div>
+       <!---- /banner ------>
+
+        <!-- hero section -->
+            <div class="relative flex flex-col items-center">
+                    <img src="{{asset('images/fb.jpg')}}" width="100%" height="auto" class="" />
+            </div>
+        <!-- /hero section -->
 
 
-        <div class=" bg-yellow-500 w-full h-16 text-white flex justify-start items-center  px-10">
+        <!-- bread crumb section -->
+        <div class=" bg-P30 w-full h-10 text-white flex justify-start items-center  px-6">
             Inicio
         </div>
-
-
-
-        <h1 class="text-center text-2xl sm:text-5xl py-10 font-medium"> Publicaciónes recientes </h1>
-        <div class="container mx-auto">
-           <!-- <livewire:front.home.lasted-post /> -->
-        </div>
-
-        <footer class="text-center">
-            <hr />
-            <p class="text-center py-5">Crafted with ❤️ by <span class="font-black">
-                    
-                </span></p>
-        </footer>
-
-
+        <!-- bread crumb section -->
+        
+        <h1 class="text-center text-2xl sm:text-5xl py-6 font-medium"> Publicaciónes recientes </h1>
        
-    </div>
+
+        <div class="container items-center">
+            <div class="container lg:flex m-0 px-0">
+                
+                <main class="px-0 mb-6" flex-grow>
+                   <livewire:front.home.lasted-post />
+                </main>
+
+                <aside class="px-4 md:flex-none  align-top m-0 p-0">
+                    <img src="{{asset('images/adds/ad-300x-600.jpg')}}" width="100%" height="auto" class="m-0 p-0" />
+                </aside>
+            </div>
+        </div>
+          
+        @include('includes.footer')
+       
+    
     <!--=============== js ===============-->
     <livewire:scripts />
 </body>

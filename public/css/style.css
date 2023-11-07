@@ -1,8 +1,87 @@
 
+
 .-err {
     border: 1px solid red;
+}
+
+.-err-b {
+    border: 1px solid blue;
+}
+
+.-err-g{
+    border: 1px solid greenyellow
+}
+
+h1{
+    font-family: Montserrat;
+    font-size:2.0rem;
+    color:#50a0e2;
+}
+
+.-titulo{
+    font-family: Montserrat;
+    font-size:2.0rem;
+    color:#50a0e2;
 }
 
 .-color-azul{
     color: #50a0e2;
 }
+
+  /* visited link */
+a:visited {
+    color: #50a0e2;
+  }
+  
+  /* mouse over link */
+a:hover {
+    color: #F880D4;
+  }
+  
+  /* selected link */
+a:active {
+    color: #50a0e2;
+}
+
+/*
+    |--------------------------------------------------------------------------
+    | textos
+    |--------------------------------------------------------------------------
+    |
+    | 
+    |
+    */
+
+p {
+    padding: 0 0 10px 0;
+}
+
+/*
+    |--------------------------------------------------------------------------
+    | listas
+    |--------------------------------------------------------------------------
+    |
+    | 
+    |
+    */
+ol{
+    margin: 20px 0 20px 0 !important;
+    margin-left:40px !important;
+}
+
+ol li{
+    list-style-type: decimal;
+}
+
+
+ul{
+    margin: 20px 0 20px 0 !important;
+    margin-left:40px !important;
+}
+
+ul li{
+    list-style-type: circle;
+}
+
+
+

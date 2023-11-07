@@ -39,7 +39,7 @@ Route::controller(AuthController::class)->middleware(['loggedin', 'Banned'])->gr
     Route::get('login', 'loginView')->name('login.index');
 });
 
-
+Route::view('aviso-de-privacidad', 'front/aviso', ['title' => 'Aviso de privacidad']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
