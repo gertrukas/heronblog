@@ -51,6 +51,7 @@
         @include('includes.footer')
        
     
+    
     <!--=============== js ===============-->
     <livewire:scripts />
 </body>
