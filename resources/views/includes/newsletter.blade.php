@@ -9,17 +9,28 @@
           #_form_1_._form-right { right:0; }
           #_form_1_ input[type="text"],#_form_1_ input[type="tel"],#_form_1_ input[type="date"],#_form_1_ textarea { padding:6px; height:auto; border:#979797 1px solid; border-radius:4px; color:#000 !important; font-size:14px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
           #_form_1_ textarea { resize:none; }
-          #_form_1_ ._submit { -webkit-appearance:none; cursor:pointer; font-family:arial, sans-serif; font-size:14px; text-align:center; background:#f03611 !important; border:3px solid #333 !important; -moz-border-radius:6px !important; -webkit-border-radius:6px !important; border-radius:6px !important; color:#fff !important; padding:9px !important; }
-          #_form_1_ ._close-icon { cursor:pointer; background-image:url('https://d226aj4ao1t61q.cloudfront.net/esfkyjh1u_forms-close-dark.png'); background-repeat:no-repeat; background-size:14.2px 14.2px; position:absolute; display:block; top:11px; right:9px; overflow:hidden; width:16.2px; height:16.2px; }
+          #_form_1_ ._submit { 
+            -webkit-appearance:none; 
+            cursor:pointer; 
+            font-family:arial, sans-serif; 
+            font-size:14px; 
+            text-align:center; 
+            color:#3e3b44 !important;
+            background:#fff!important; 
+            border:1px solid #fff !important; -moz-border-radius:2px !important; -webkit-border-radius:2px !important; 
+            border-radius:2px !important; 
+            padding:9px !important; }
+          #_form_1_ ._close-icon { cursor:pointer; background-image:url('https://d226aj4ao1t61q.cloudfront.net/esfkyjh1u_forms-close-dark.png'); background-repeat:no-repeat; background-size:14.2px 14.2px; position:absolute; display:block; top:11px; right:9px; overflow:hidden; 
+          width:16.2px; height:16.2px; }
           #_form_1_ ._close-icon:before { position:relative; }
-          #_form_1_ ._form-body { margin-bottom:30px; }
+          #_form_1_ ._form-body { margin-bottom:30px; border:1px solid green}
           #_form_1_ ._form-image-left { width:150px; float:left; }
           #_form_1_ ._form-content-right { margin-left:164px; }
           #_form_1_ ._form-branding { color:#fff; font-size:10px; clear:both; text-align:left; margin-top:30px; font-weight:100; }
           #_form_1_ ._form-branding ._logo { display:block; width:130px; height:14px; margin-top:6px; background-image:url('https://d226aj4ao1t61q.cloudfront.net/hh9ujqgv5_aclogo_li.png'); background-size:130px auto; background-repeat:no-repeat; }
           #_form_1_ .form-sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0, 0, 0, 0); border:0; }
           #_form_1_ ._form-label,#_form_1_ ._form_element ._form-label { font-weight:bold; margin-bottom:5px; display:block; }
-          #_form_1_._dark ._form-branding { color:#333; }
+          #_form_1_._dark ._form-branding { color:#fff; }
           #_form_1_._dark ._form-branding ._logo { background-image:url('https://d226aj4ao1t61q.cloudfront.net/jftq2c8s_aclogo_dk.png'); }
           #_form_1_ ._form_element { position:relative; margin-bottom:10px; font-size:0; max-width:100%; }
           #_form_1_ ._form_element * { font-size:14px; }
@@ -79,7 +90,9 @@
             margin:25px auto 0; 
             padding:20px; -webkit-box-sizing:border-box;
              -moz-box-sizing:border-box; 
-             box-sizing:border-box; zoom:1; background:#219f94 !important; border:2px dashed #219f94 !important; max-width:500px; -moz-border-radius:15px !important; -webkit-border-radius:15px !important; border-radius:15px !important; color:#ebe2e2 !important; }
+             box-sizing:border-box; zoom:1; background:#50a0e2 !important; border:0px dashed #50a0e2  !important; 
+             max-width:500px; -moz-border-radius:3px !important; -webkit-border-radius:3px !important; border-radius:3px !important; 
+             color:#ebe2e2 !important; }
           #_form_1_._inline-form,#_form_1_._inline-form ._form-content,#_form_1_._inline-form input,#_form_1_._inline-form ._submit { font-family:"Lato", sans-serif; }
           #_form_1_ ._form-title { font-size:22px; line-height:22px; font-weight:600; margin-bottom:0; }
           #_form_1_:before,#_form_1_:after { content:" "; display:table; }
@@ -104,7 +117,7 @@
         </style>
         <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Roboto&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://unpkg.com/intl-tel-input@17.0.18/build/css/intlTelInput.min.css"/>
-        <form method="POST" action="https://heronpazzi.activehosted.com/proc.php" id="_form_1_" class="_form _form_1 _inline-form  " novalidate>
+        <form method="POST" action="https://heronpazzi.activehosted.com/proc.php" id="_form_1_" class="_form _form_1 _inline-form" novalidate>
           <input type="hidden" name="u" value="1" />
           <input type="hidden" name="f" value="1" />
           <input type="hidden" name="s" />

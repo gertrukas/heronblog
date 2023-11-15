@@ -47,7 +47,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/biografia', [HomeController::class, 'bio'])->name('bio');
+
 
 
 Route::post('images/upload', [ImageController::class, 'upload'])->name('upload.image');

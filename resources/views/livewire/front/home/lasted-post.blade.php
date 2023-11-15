@@ -6,7 +6,7 @@
         <div class="border shadow-lg rounded-lg py-8  px-8 flex flex-col lg:flex-row">
             
             <div class="w-full lg:w-1/2 p-0">
-                <img src="{{ asset('uploads/' . $blog->image) }}" class="w-full object-contain" alt="">
+                <a href="{{ route('posts.show', $blog->slug) }}"><img src="{{ asset('uploads/' . $blog->image) }}" class="w-full object-contain" alt="{{ $blog->name }}"></a>
             </div>
 
             <div class="w-full lg:w-1/2 flex justify-start flex-col align-top items-start p-4 pt-0">
