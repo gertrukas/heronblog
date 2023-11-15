@@ -5,20 +5,25 @@
     @include('includes.head')
 
    
-    <meta property="og:title" content="{{ $blog->name }}"/>
+    
+   
     <meta property="og:site_name" content="heronpazzi.com"/>
-    <meta property="og:url" content="@yield('ogUrl', 'https://blogs.heronpazzi.com')"/>
-    <meta property="og:description" content="@yield('ogDesc', 'Los expertos en la salud y bienestar de tu perro.')"/>
-    <meta property="og:type" content="@yield('ogType', 'website')"/>
-    <meta property="og:locale" content="es"/>
-    <meta property="og:image" content="https://uploads/{{ $blog->image }}"/>
+   
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{ $blog->slug }}"/>
+    <meta property="og:description" content="Los expertos en la salud y bienestar de tu perro."/>
+    
+    <meta property="og:image" content="https://blogs.heronpazzi.com/uploads/{{ $blog->image }}"/>
     <meta property="og:image:width" content="400" />
     <meta property="og:image:height" content="400" />
-    <meta property="fb:app_id" content="875029200167861"/>
     
+
+
 </head>
 
 <body class="p-0 bg-white">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v18.0&appId=714038927277647" nonce="qJoelLet"></script>
 
     <div>
         <livewire:front.home.navigation>
@@ -47,25 +52,21 @@
                         </div>
 
                         <div class="">
-                            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fheronpazzi.com%2Fblog%2Famputacion-de-miembros-en-perros&width=450&layout=standard&action=like&size=small&share=true&height=35&appId=875029200167861"
-                            
-                                width="450"
-                                height="20"
-                                style="border:none;
-                                    overflow:hidden;
-                                    color:white;"
-                                allowfullscreen="true"
-                                allow="autoplay;
-                                    clipboard-write;
-                                    encrypted-media;
-                                    picture-in-picture;
-                                    web-share">
-                            </iframe>
-                    
+                            {{-- FACEBOOK --}}
+                            <div class="fb-like" 
+                                data-href="https://blogs.heronpazzi.com/blogs/{{ $blog->slug }}" 
+                                data-width="" 
+                                data-layout="" 
+                                data-action="" 
+                                data-size="" 
+                                data-share="true">
+                            </div>
+                            {{-- FACEBOOK END --}}
                         </div>
 
-                        
+                        {{-- WatssApp --}}
                         <div class="pt-1 pb-1"><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-whatsapp" href="https://api.whatsapp.com/send?text= checa este artículo {{ $blog->name }} %0A%0A https://heronpazzi.com/blogs/{!! $blog->name !!}" title="WhatsApp" style="transition: opacity 0.2s ease 0s; opacity: 1;"><img src="{{asset("images/sociales/whatsapp.png")}}" width="30px" height="auto"></a></div>
+                        {{-- WhatsApp END --}} 
                     </article>
 
                     {{-- Autor --}} 

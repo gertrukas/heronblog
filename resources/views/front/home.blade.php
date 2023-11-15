@@ -12,7 +12,9 @@
 
         
         @include('includes.header')
-        <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
+
+        {{-- <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1> --}}
+        
         <!---- banner ------>
             <div class="flex items-center justify-center p-2">
                 <a href="/" class="content-center"><img src="{{asset('images/banner/master-class-gratuita.jpg')}}"></a>
