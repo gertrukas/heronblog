@@ -34,13 +34,6 @@ h3{
 }
 
 
-
-
-a.no-underline:link, a.no-underline:visited {
-    text-decoration: none;
-}
-
-
 a:link, a:visited {
     color: #50a0e2;
     text-decoration: underline;
@@ -48,6 +41,10 @@ a:link, a:visited {
   
 a:hover {
     color: #F880D4;
+}
+
+a.no-underline:link, a.no-underline:visited{
+    text-decoration: none;
 }
 
 
