@@ -21,8 +21,8 @@
                 </p>
 
                 <div class=" flex justify-end items-end w-full h-full">
-                    <a class="-boton-azul"
-                        href="{{ route('posts.show', $blog->slug) }}">Ver más</a>
+                    <a class="no-underline -boton-azul"
+                        href="{{ route('posts.show', $blog->slug) }}">leer más</a>
 
                 </div>
 

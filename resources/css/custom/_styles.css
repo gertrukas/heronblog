@@ -22,7 +22,7 @@ h3{
 }
 
 .-boton-azul{
-    @apply bg-P30  text-white  font-semibold  hover:text-P10 hover:bg-white border visited:text-white active:text-white border-P30  p-2;
+    @apply bg-P30  text-white no-underline font-semibold  hover:text-P10 hover:bg-white border visited:text-white active:text-white border-P30  p-2;
 }
 
 .-blue-link{

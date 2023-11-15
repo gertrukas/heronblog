@@ -33,11 +33,13 @@ h3{
     font-size:1.5rem;
 }
 
+
+
+
 a.no-underline:link, a.no-underline:visited {
-    color: #50a0e2;
     text-decoration: none;
-   
 }
+
 
 a:link, a:visited {
     color: #50a0e2;
