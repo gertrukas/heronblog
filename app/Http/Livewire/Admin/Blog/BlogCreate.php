@@ -21,8 +21,8 @@ class BlogCreate extends Component
     public $blog, $categories, $action;
     public $tags, $tag;
 
-    
-    
+
+
     public $name;
     public $slug;
     public $intro;
@@ -31,17 +31,17 @@ class BlogCreate extends Component
     public $description = '';
     public $image;
     public $post_type = 'post';
-    public $category_id ;
+    public $category_id;
 
     public $isUploading = false;
     public $isUploadingTwo = false;
 
     public function mount($id = null)
     {
-        $this->tags = Tag::get()->pluck('name','id')->toArray();
+        $this->tags = Tag::get()->pluck('name', 'id')->toArray();
         $this->categories = Category::all();
 
-        
+
         if ($id) {
             $this->blog  = Blog::where('id', $id)->firstOrFail();
             if ($this->blog) {
@@ -68,7 +68,7 @@ class BlogCreate extends Component
 
     public function save()
     {
-        if ( $this->action == 'Crear Blog') {
+        if ($this->action == 'Crear Blog') {
             $this->validate([
                 'name' => 'required',
                 'intro' => 'required',
@@ -84,8 +84,13 @@ class BlogCreate extends Component
                 'author' => 'required',
             ]);
         }
-        
-        $this->blog->slug = $this->createUniqueSlug($this->name);
+        if ($this->action == 'Crear Blog') {
+            $this->blog->slug = $this->createUniqueSlug($this->name);
+        } else {
+            if ($this->blog->name != $this->name) {
+                $this->blog->slug = $this->createUniqueSlug($this->name);
+            }
+        }
 
         if ($this->image) {
             // Genera un slug para el archivo
