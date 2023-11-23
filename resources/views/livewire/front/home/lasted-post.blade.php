@@ -3,31 +3,33 @@
 
 <div class="grid grid-cols-1 text-center mx-0  gap-x-0 gap-y-5 my-0">
     @foreach ($this->blogs as $blog)
-        <div class="border shadow-lg rounded-lg py-8  px-8 flex flex-col lg:flex-row">
+        <div class="border shadow-lg rounded-lg py-4  px-8 flex flex-col lg:flex-row">
             
             <div class="w-full lg:w-1/2 p-0">
                 <a href="{{ route('posts.show', $blog->slug) }}"><img src="{{ asset('uploads/' . $blog->image) }}" class="w-full object-contain" alt="{{ $blog->name }}"></a>
             </div>
 
-            <div class="w-full lg:w-1/2 flex justify-start flex-col align-top items-start p-4 pt-0">
-                <h3 class="text-2xl font-semibold text-left">
+            <div class="w-full lg:w-1/2 flex justify-start flex-col align-top items-start p-4 pt-0 pb-0">
+                <h2 class="text-2xl font-semibold text-left">
                     {{ $blog->name }}
-                </h3>
+                    
+                </h2>
                 <p class="text-gray-500 text-left">
                    {{ $blog->date ? changeFormatDateApp($blog->date)->format('d-M-Y') : changeFormatDateApp($blog->created_at)->format('d-M-Y') }}
                 </p>
                 <p class="text-left">
-                    {!! $blog->intro !!}
+                    {!!  Str::words($blog->intro, 26, '...') !!}
+                    
+                   
+                    
                 </p>
 
                 <div class=" flex justify-end items-end w-full h-full">
-                    <a class="no-underline -boton-azul"
-                        href="{{ route('posts.show', $blog->slug) }}">leer más</a>
-
+                    <a class="-boton-azul" href="{{ route('posts.show', $blog->slug) }}">leer más</a>
                 </div>
 
             </div>
-            {{-- In work, do what you enjoy. --}}
+           
         </div>
     @endforeach
 

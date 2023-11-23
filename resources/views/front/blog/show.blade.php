@@ -105,7 +105,8 @@
                                 <figure class="mx-auto">
                                     <a href="{{ route('posts.show', $item->slug) }}" class=""><img src="{{ asset('uploads/' . $item->image) }}" class="w-full object-contain rounded-md py-0  my-1" width=""></a>
 
-                                    <a href="{{ route('posts.show', $item->slug) }}" class="no-underline"><h2> {{ str_limit($item->name, 50, '...') }}</h2></a>
+                                    <a href="{{ route('posts.show', $item->slug) }}" class="-link-titulo"> {{ str_limit($item->name, 50, '...') }}</a>
+
                                     <p class="text-gray-400 text-sm">
                                         Author: {{ $item->author }}
                                     </p>

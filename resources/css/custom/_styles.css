@@ -4,13 +4,18 @@ h1{
 }
 
 h2{
-    @apply text-titulo text-xl sm:text-base py-0 no-underline
+    @apply text-titulo 
 }
 
 h3{
     @apply text-titulo text-2xl 
 }
 
+@layer base {
+    a {
+      @apply underline
+    }
+  }
 
 .-boton{
     background: #000;
@@ -22,7 +27,11 @@ h3{
 }
 
 .-boton-azul{
-    @apply bg-P30  text-white no-underline font-semibold  hover:text-P10 hover:bg-white border visited:text-white active:text-white border-P30  p-2;
+    @apply bg-P30  border-P30 font-semibold no-underline
+        text-white
+        hover:text-P10 hover:bg-white border 
+        visited:text-white 
+        active:text-white  p-2;
 }
 
 .-blue-link{
@@ -30,13 +39,17 @@ h3{
 }
 
 .-link-breadcrumb{
-    @apply text-white  font-semibold  hover:text-P10 visited:text-white active:text-white pr-1;
+    @apply text-white no-underline font-semibold  hover:underline hover:text-P10 visited:text-white active:text-white pr-1;
+}
+
+.-link-titulo{
+    @apply text-titulo no-underline text-2xl font-semibold 
 }
 
 .-titulo{
     @apply py-4 pt-6 text-titulo
 }
 .-aviso{
-    @apply text-P30 no-underline hover:text-P10 hover:underline visited:text-P30;
+    @apply text-P30 hover:text-P10 hover:underline visited:text-P30 underline;
 }
 
