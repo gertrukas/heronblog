@@ -13,7 +13,7 @@ h3{
 
 @layer base {
     a {
-      @apply underline
+      @apply underline text-P30
     }
   }
 

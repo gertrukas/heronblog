@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('../layout/main')
 
-<head>
-    @include('includes.head')
-
-</head>
-
-<body class="p-0 bg-white">
-
-        
-        @include('includes.header')
+@section ('content')
         
         <!-- bread crumb section -->
         <div class=" bg-P30 w-full h-10 text-white  flex justify-start items-center  px-6">
@@ -35,12 +26,4 @@
         </div>
 
 
-
-        @include('includes.footer')
-       
-    
-    <!--=============== js ===============-->
-    <livewire:scripts />
-</body>
-
-</html>
+@endsection

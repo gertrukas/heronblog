@@ -128,7 +128,7 @@
           <input type="hidden" name="or" value="b971449696a66d085a86bc38e9a55125" />
           <div class="_form-content">
             <div class="_form_element _x12118228 _full_width _clear" >
-              <div class="_form-title">
+              <div class="_form-title -err p-4 bg-red-500 text-white">
                 Suscríbete a nuestra Newsletter
               </div>
             </div>
@@ -136,7 +136,10 @@
               <div class="_html-code">
                 <p>
                   Recibe semanalmente el interesante artículo publicado en el Blog.
+                  <br>
+                  Si no lo recibes revisa tu bandeja de SPAM
                 </p>
+
               </div>
             </div>
             <div class="_form_element _x91813693 _full_width " >

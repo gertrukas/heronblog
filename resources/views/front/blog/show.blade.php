@@ -1,34 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('../layout/main')
 
-<head>
-    @include('includes.head')
+@section ('content')
 
-   
-    
-   
-    <meta property="og:site_name" content="heronpazzi.com"/>
-   
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="{{ $blog->slug }}"/>
-    <meta property="og:description" content="Los expertos en la salud y bienestar de tu perro."/>
-    
-    <meta property="og:image" content="https://blogs.heronpazzi.com/uploads/{{ $blog->image }}"/>
-    <meta property="og:image:width" content="400" />
-    <meta property="og:image:height" content="400" />
-    
-
-
-</head>
-
-<body class="p-0 bg-white">
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v18.0&appId=714038927277647" nonce="qJoelLet"></script>
 
     <div>
-        <livewire:front.home.navigation>
-        <livewire:front.home.search-component >
-
         <!-- bread crumb section -->
         <div class=" bg-P30 w-full h-10 text-white flex justify-start items-center  px-6">
             <a href="/" class="-link-breadcrumb"> Inicio </a> / {{ $blog->name }} 
@@ -124,13 +101,4 @@
 
         </main>
 
-        @include('includes.footer')
-
-
-
-    </div>
-    <!--=============== js ===============-->
-    <livewire:scripts />
-</body>
-
-</html>
+@endsection
