@@ -152,6 +152,7 @@
  @import "./components/_full-calendar.css";
  @import "./components/_pristine.css";
 
+
 @import "./components/_buttons.css";
 @import "./components/_badges.css";
 @import "./components/_chart.css";
@@ -160,3 +161,5 @@
 @import "./custom/_styles.css";
 /* @import "./components/_tail-select.css"; */
 
+@tailwind components;
+@tailwind utilities;

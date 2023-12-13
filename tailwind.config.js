@@ -10,6 +10,7 @@ module.exports = {
         "./src/**/*.{php,html,js,jsx,ts,tsx,vue}",
         "./resources/**/*.{php,html,js,jsx,ts,tsx,vue}",
         "./node_modules/@left4code/tw-starter/**/*.js",
+        "./node_modules/tw-elements/dist/js/**/*.js",
         // ".//*.html",
     ],
     darkMode: "class",
@@ -20,6 +21,9 @@ module.exports = {
                 'P30': '#50a0e2',
                 'P10': '#F880D4',
                 'titulo': '#145da0',
+                'cafe': '#c3a98d',
+                'ocre': '#7c7b75',
+                'ladrillo': '#891315',
                 rgb: toRGB({
                     
                     inherit: colors.inherit,
@@ -121,7 +125,10 @@ module.exports = {
         }
        
     },
-    plugins: [require("@tailwindcss/forms")],
+    plugins: [
+        require("@tailwindcss/forms"),
+        require("tw-elements/dist/plugin.cjs"),
+    ],
     variants: {
         extend: {
             boxShadow: ["dark"],

@@ -113,8 +113,6 @@ class BlogIndex extends Component
         $this->showSuccess('Se elimino correctamente');
     }
 
-
-
     public function search()
     {
         $this->searchFilters = true;

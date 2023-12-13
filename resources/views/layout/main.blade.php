@@ -8,8 +8,11 @@
 
         @include('includes.footer')
 
-        <!--=============== js ===============-->
+        {{-- --=============== js =============== --}}
         @livewireScripts
-        
-       
+
+       {{-- TW-ELEMENTS --}}
+        <script type="text/javascript" src="/dist/js/tw-elements.umd.min.js"></script>
+
+
 @endsection

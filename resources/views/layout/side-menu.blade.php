@@ -1,8 +1,10 @@
-@extends('../layout/main')
+@extends('../layout/mainadmin')
+
 
 @section('head')
     @yield('subhead')
 @endsection
+
 
 @section('content')
     @include('../layout/components/mobile-menu')

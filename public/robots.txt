@@ -1,2 +1,6 @@
+
 User-agent: *
-Disallow:
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /admin/
+Sitemap: https://heronpazzi/sitemap.xml

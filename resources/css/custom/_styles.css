@@ -1,14 +1,35 @@
 
-h1{
-    @apply text-titulo text-xl sm:text-4xl py-4 font-medium
+
+h1{ 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    line-height: normal;
+    @apply text-titulo font-medium
 }
 
 h2{
-    @apply text-titulo 
+    font-family: 'Montserrat', sans-serif;
+    font-size:1.25rem;
+    line-height: normal;
+    @apply text-titulo
 }
 
 h3{
+    font-family: 'Montserrat', sans-serif;
     @apply text-titulo text-2xl 
+}
+
+h4{
+    font-family: 'Montserrat', sans-serif;
+    @apply text-titulo font-semibold
+}
+
+h5{ 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    line-height: normal;
+    text-shadow: 2px 2px 4px #000000;
+    @apply text-titulo font-medium
 }
 
 @layer base {
@@ -16,6 +37,10 @@ h3{
       @apply underline text-P30
     }
   }
+
+nav li{
+    list-style-type: none;
+}
 
 .-boton{
     background: #000;
@@ -26,16 +51,23 @@ h3{
     @apply bg-white  text-blue-500  font-semibold  hover:text-white hover:bg-blue-500 border border-white visited:text-white p-2;
 }
 
+
+.-nav-link{
+    font-family: 'Lato', sans-serif;
+    @apply bg-P30  border-P30 font-semibold no-underline px-4
+        text-white
+        hover:text-P10
+        visited:text-white 
+        active:text-white;
+ 
+}
+
 .-boton-azul{
     @apply bg-P30  border-P30 font-semibold no-underline
         text-white
         hover:text-P10 hover:bg-white border 
         visited:text-white 
         active:text-white  p-2;
-}
-
-.-blue-link{
-    @apply text-white no-underline hover:underline hover:text-P10 visited:text-white active:text-white ;
 }
 
 .-link-breadcrumb{
@@ -49,7 +81,17 @@ h3{
 .-titulo{
     @apply py-4 pt-6 text-titulo
 }
+
+
+
 .-aviso{
     @apply text-P30 hover:text-P10 hover:underline visited:text-P30 underline;
 }
 
+footer p{
+    color: white;
+}
+
+footer a{
+    @apply text-white hover:text-P10 hover:underline visited:text-white underline;
+}

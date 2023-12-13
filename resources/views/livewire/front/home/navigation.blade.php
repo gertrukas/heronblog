@@ -1,70 +1,83 @@
-<nav x-data="accordion(6)" class="top-0 z-40 flex flex-wrap items-end  bg-P30  justify-between w-full">
-    <!-- Left nav -->
-    <div class="p-0 m-0">
-        <a href="/" class="content-center"><img src="{{asset('images/heron-pazzi-mvz.png')}}" class="w-64 sm:w-64 lg:w-full"></a>
-    </div>
-    <!-- End left nav -->
-
-    <!-- Right nav -->
-    <!-- Show menu sm,md -->
-    <!-- Toggle button -->
-    <div @click="handleClick()" x-data="{open : false}" class="block text-gray-600 cursor-pointer lg:hidden">
-      <button @click="open = ! open" class="w-6 h-6 text-lg">
-        <svg x-show="! open" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" :clas="{'transition-full each-in-out transform duration-500':! open}">
-          <rect width="48" height="48" fill="white" fill-opacity="0.01"></rect>
-          <path d="M7.94977 11.9498H39.9498" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-          <path d="M7.94977 23.9498H39.9498" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-          <path d="M7.94977 35.9498H39.9498" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
-
-        <svg x-show="open" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-    </div>
-    <!-- End toggle button -->
-
-    <!-- Toggle menu -->
-    <div x-ref="tab" :style="handleToggle()" class="relative w-full overflow-hidden transition-all duration-700 lg:hidden max-h-0">
+<!-- Main navigation container tw-elements-->
+<nav
+  class="flex-no-wrap relative flex w-full items-center justify-between bg-P30 py-0 lg:pt-0 shadow-md shadow-black/5 lg:flex-wrap lg:justify-start">
+  <div class="flex w-full flex-wrap items-center justify-between px-0">
+    <!-- Hamburger button for mobile view -->
+    <button
+      class="block border-0 bg-transparent px-2 text-white hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+      type="button"
+      data-te-collapse-init
+      data-te-target="#navbarSupportedContent1"
+      aria-controls="navbarSupportedContent1"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
       
-        <div class="flex flex-col">
-            <a href="#" class="-boton-azul"><span>Contacto</span></a>
-        </div>
-       
-    </div>
-    <!-- End toggle menu -->
-    <!-- End show menu sm,md -->
+      {{-- Hamburger icon --}}
+      <span class="[&>svg]:w-7">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="h-7 w-7">
+          <path
+            fill-rule="evenodd"
+            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+            clip-rule="evenodd" />
+        </svg>
+      </span>
+    </button>
 
-    <!-- Show Menu lg -->
-    <div class="hidden w-full lg:flex  lg:w-auto">
-          <a href="#" class="-boton-azul ">Contacto</a>
+    {{-- LOGO --}}
+    <div class="w-full py-0 px-3 m-0 flex justify-left items-left ">
+      <a href="/">
+        <img
+          src="{{asset('images/heron-pazzi-mvz.png')}}"
+          alt="Herón Pazzi"
+          class="md:w-64 lg:w-64 "
+          />
+      </a>
     </div>
-    
-    <!-- End show Menu lg -->
-    <!-- End right nav -->
-  </nav>
-  <script>
-    // Faq
-    document.addEventListener('alpine:init', () => {
-      Alpine.store('accordion', {
-        tab: 0
-      });
-      Alpine.data('accordion', (idx) => ({
-        init() {
-          this.idx = idx;
-        },
-        idx: -1,
-        handleClick() {
-          this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
-        },
-        handleRotate() {
-          return this.$store.accordion.tab === this.idx ? '-rotate-180' : '';
-        },
-        handleToggle() {
-          return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
-        }
-      }));
-    })
-    //  end faq
-  </script>
+
+
+    <!-- Collapsible navigation container -->
+    <div
+      class="!visible hidden  w-full flex-grow basis-[100%] lg:!flex justify-end items-center p-0 bg-P30 "
+      id="navbarSupportedContent1"
+      data-te-collapse-item>
+     
+      <!-- Left center links -->
+      <div > 
+
+          <ul class="mr-auto flex flex-col lg:flex-row" data-te-navbar-nav-ref>
+            
+            <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+              <a
+                class="-nav-link"
+                href="/contacto"
+                data-te-nav-link-ref
+                >Contacto</a
+              >
+            </li>
+          </ul>
+
+      </div>
+    </div>
+
+
+
+  </div>
+</nav>
+
+<script>
+import {
+  Collapse,
+  Dropdown,
+  initTE,
+} from "tw-elements";
+
+initTE({ Collapse, Dropdown });
+</script>
+
+
+
+

@@ -51,6 +51,7 @@
         "tippy.js": "^6.2.7",
         "toastify-js": "^1.9.0",
         "tom-select": "^1.7.5",
+        "tw-elements": "^1.1.0",
         "xlsx": "^0.16.6",
         "zoom-vanilla.js": "^2.0.6"
     },
