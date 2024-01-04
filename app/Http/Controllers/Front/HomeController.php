@@ -16,8 +16,7 @@ class HomeController extends Controller
     use GetIpAddress;
 
     public function index()
-    {
-       
+    { 
         return view('front.home');
     }
 

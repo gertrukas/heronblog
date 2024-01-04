@@ -165,7 +165,7 @@
    </button>
  </div>
  
-     <script> 
+     <script type="module"> 
              // Initialization for ES Users
          import {
          Carousel,

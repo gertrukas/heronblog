@@ -68,7 +68,7 @@
   </div>
 </nav>
 
-<script>
+<script type="module">
 import {
   Collapse,
   Dropdown,

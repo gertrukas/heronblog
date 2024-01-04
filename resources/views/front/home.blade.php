@@ -2,22 +2,19 @@
 
 
 @section ('content')
-    
-    <!---- banner ------>
-    <div class="flex items-center justify-center p-2">
-      <a href="/" class="content-center"><img src="{{asset('images/banner/master-class-gratuita.jpg')}}"></a>
-    </div>
-    <!---- /banner ------>
 
+    
+        <!---- banner ------>
+        <div class="flex items-center justify-center p-2">
+          <a href="/" class="content-center"><img src="{{asset('images/banner/master-class-gratuita.jpg')}}"></a>
+        </div>
+        <!---- /banner ------>
+    
 
     {{-- SLIDER --}}
     <x-slider />
     {{-- /SLIDER --}}
   
-    {{-- BUSCADOR --}}
-
-    {{-- /BUSCADOR --}}
-
     <!-- bread crumb section -->
     <div class=" bg-P30 w-full h-10 text-white flex justify-start items-center  px-6">
         <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -29,11 +26,12 @@
           </svg>
     </div>
     <!-- bread crumb section -->
+    
     <div class="container items-center">
       <div class="container lg:flex m-0 px-0">
           
           <main class="px-0 mb-6" flex-grow>
-             <livewire:front.home.lasted-post />
+             <livewire:front.home.lasted-post/>
           </main>
 
           <aside class="px-4 md:flex-none  align-top m-0 p-0">
