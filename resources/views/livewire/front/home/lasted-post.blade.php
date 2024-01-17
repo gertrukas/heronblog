@@ -1,6 +1,5 @@
 
-
-
+{{$mivariable}}
 <div class="grid grid-cols-1 text-center mx-0  gap-x-0 gap-y-5 my-0">
     @foreach ($this->blogs as $blog)
         <div class="border shadow-lg rounded-lg py-4  px-8 flex flex-col lg:flex-row">

@@ -13,20 +13,30 @@ class LastedPost extends Component
     public $addElements = 5;
     public $search;
     public $total;
+    
+    public $mivariable;
 
     protected  $listeners = ['loadSearch', 'render'];
 
-    public function loadSearch($search = null)
+    public function loadSearch($search = null, $mivariable = 'nada')
     {
+
+        
+
         $this->showElements = 5;
         
         $this->search = $search;
+        
+        $this ->mivariable = $mivariable;
+        
+
         $this->blogs =     Blog::where('active', true)
             ->search($this->search)
             ->orderBy('created_at', 'desc')
             ->take($this->showElements)->get();
         //    $this->render();
         $this->total = Blog::where('active', true)->search($this->search)->orderBy('created_at', 'desc')->count();
+        
     }
 
     public function verMas()
@@ -38,6 +48,9 @@ class LastedPost extends Component
     {
         $this->blogs = Blog::where('active', true)->search($this->search)->orderBy('created_at', 'desc')->take($this->showElements)->get();
         $this->total = Blog::where('active', true)->search($this->search)->orderBy('created_at', 'desc')->count();
+
+        $this->mivariable = $this->mivariable;
+
     }
 
     public function render()

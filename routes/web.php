@@ -8,6 +8,9 @@ use App\Http\Controllers\ColorSchemeController;
 use App\Http\Controllers\Front\BlogController;
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\ProductController;
+use App\Http\Controllers\Front\SearchController;
+
+
 use App\Http\Livewire\Global\User\UserProfile;
 use Illuminate\Support\Facades\Artisan;
 
@@ -28,10 +31,15 @@ Route::get('clear-caches', function () {
     return 'FINISHED';
 });
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'], ['title' => 'Quienes somos'])->name('home');
+
+
+Route::get('/search', [SearchController::class, 'index']);
+
 
 Route::get('blogs', [BlogController::class, 'index'])->name('posts.index');
 Route::get('blogs/{slug}', [BlogController::class, 'show'])->name('posts.show');
+
 
 
 Route::view('quienes-somos', 'front/quienes-somos', ['title' => 'Quienes somos']);
@@ -39,6 +47,8 @@ Route::view('metodologia', 'front/metodologia', ['title' => 'Metodología']);
 Route::view('reserva-en-linea', 'front/reserva-en-linea', ['title' => 'Reserva en línea']);
 Route::view('contacto', 'front/contacto', ['title' => 'Contacto']);
 Route::view('aviso-de-privacidad', 'front/aviso', ['title' => 'Aviso de privacidad']);
+
+
 
 
 Route::controller(AuthController::class)->middleware(['loggedin', 'Banned'])->group(function () {
