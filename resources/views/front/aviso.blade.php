@@ -7,6 +7,8 @@
             <a href="/" class="-link-breadcrumb">Inicio</a> / Aviso de privacidad
         </div>
         <!-- bread crumb section -->
+
+
         <div class="container w-full items-center">
             <div class="container lg:flex m-0 px-0">
                 

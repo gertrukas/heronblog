@@ -91,7 +91,7 @@
             {{-- Autor --}}
             <div class="">
                 <label for="autor" class="font-bold mb-1 text-gray-700 block">
-                    Intruducción
+                    Introducción
                 </label>
                 <input type="text" id="intro" name="intro" wire:model.defer="intro" class="form-control"
                     placeholder="Introducción">
