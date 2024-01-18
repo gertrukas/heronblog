@@ -36,7 +36,20 @@
           </main>
 
           <aside class="px-4 md:flex-none  align-top m-0 p-0">
-              <img src="{{asset('images/adds/ad-300x-600.jpg')}}" width="100%" height="auto" class="m-0 p-0" />
+
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9881031305253297"
+                    crossorigin="anonymous"></script>
+              <!-- cuadrados -->
+              <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-9881031305253297"
+                    data-ad-slot="9422880012"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+              <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+              
           </aside>
       </div>
   </div>

@@ -13,8 +13,7 @@
     gtag('config', 'G-HF4KHW6STF');
     </script>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9881031305253297"
-crossorigin="anonymous"></script>
+
     
     @include('includes.head') 
 
