@@ -3,9 +3,11 @@
 
 @section ('content')
         <!---- banner ------>
+        <!--
         <div class="flex items-center justify-center p-2">
           <a href="/" class="content-center"><img src="{{asset('images/banner/master-class-gratuita.jpg')}}"></a>
         </div>
+      -->
         <!---- /banner ------>
     
 

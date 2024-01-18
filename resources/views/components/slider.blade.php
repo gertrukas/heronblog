@@ -58,58 +58,7 @@
          </p>
        </div>
      </div>
-     <!--Second item-->
-     <div
-       class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-       data-te-carousel-item
-       style="backface-visibility: hidden">
-       <img
-         src="{{asset('images/slider/Navidad-cachorro-2.jpg')}}"
-         class="block w-full"
-         alt="..." />
-       <div
-         class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-         <h5 class="text-white font-bold -text-carrousel">Un centro de Rehabilitación,</h5>
-         <p class="text-xl -text-carrousel">
-             Encaminado hacia la sanación con más de 25 años de experiencia. 
-         </p>
-       </div>
-     </div>
-     <!--Third item-->
-     <div
-       class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-       data-te-carousel-item
-       style="backface-visibility: hidden">
-       <img
-         src="{{asset('images/slider/otitis-en-perros.jpg')}}"
-         class="block w-full"
-         alt="..." />
-       <div
-         class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-         <h5 class="text-white font-bold -text-carrousel">Inicio de la sanación</h5>
-         <p class="text-xl -text-carrousel">
-             No importa qué tipo de adicción sufras, hay momentos en los que simplemente se debe pedir ayuda y admitir que hay un problema.
-         </p>
-       </div>
-     </div>
- 
-     {{-- Fourth item --}}
-     <div
-         class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-         data-te-carousel-item
-         style="backface-visibility: hidden">
-         <img
-         src="{{asset('images/slider/perro-ferales.jpg')}}"
-         class="block w-full"
-         alt="..." />
-         <div
-             class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-             <h5 class="text-white font-bold -text-carrousel">Calidad de nuestros servicios</h5>
-             <p class="text-xl -text-carrousel">
-                 Nuestros profesionales se reunirán con usted  para adaptar el programa de recuperación de acuerdo a su particular situación, brindando atención individual y grupal.
-             </p>
-         </div>
-     </div>
+     
  
    </div>
  
