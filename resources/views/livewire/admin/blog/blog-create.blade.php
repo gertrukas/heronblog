@@ -101,7 +101,7 @@
                 @enderror
 
             </div>
-
+            
             {{-- Descripción --}}
             <div class="">
                 <label for="title" class="font-bold mb-1 text-gray-700 block">
