@@ -13,9 +13,8 @@
         </article>
 
     @empty
-        <p class="text-center">No hay Articulos para mostrar</p>
+        <p class="text-center">No hay más articulos para mostrar</p>
     @endforelse
-
 
 
     {{ $blogs->links() }}

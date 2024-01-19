@@ -102,7 +102,7 @@
                         </div>
 
                         {{-- WatssApp --}}
-                        <div class="pt-1 pb-1"><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-whatsapp" href="https://api.whatsapp.com/send?text= checa este artículo {{ $blog->name }} %0A%0A https://heronpazzi.com/blogs/{!! $blog->name !!}" title="WhatsApp" style="transition: opacity 0.2s ease 0s; opacity: 1;"><img src="{{asset("images/sociales/whatsapp.png")}}" width="30px" height="auto"></a></div>
+                        <div class="pt-1 pb-1"><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-whatsapp" href="https://api.whatsapp.com/send?text= checa este artículo {{ $blog->name }} %0A%0A https://heronpazzi.com/blogs/{!! $blog->slug !!}" title="WhatsApp" style="transition: opacity 0.2s ease 0s; opacity: 1;"><img src="{{asset("images/sociales/whatsapp.png")}}" width="30px" height="auto"></a></div>
                         {{-- WhatsApp END --}} 
                     </article>
 
