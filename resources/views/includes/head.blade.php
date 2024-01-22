@@ -12,4 +12,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
 
+
+
+<!-- Open Graph Meta Tag
+
+<meta property="og:url"           content="https://heronpazzi.com/@isset($blog->slug)blogs/{{$blog->slug}} @endisset" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="Herón Pazzi" />
+<meta property="og:description"   content="Médico Veterinario Zootecnista, dedicado a la clínica y cirugía de perros y gatos. Ex académico de la FMVZ UNAM y de la FCN UAQ. Conferencista y amante de los perros y su bienestar." />
+<meta property="og:image"         content="https://heronpazzi.com/@if(empty($blog->image))public/image/fb.jpg @else
+uploads/blogs/{{$blog->image}}@endif" />
+
 @livewireStyles
