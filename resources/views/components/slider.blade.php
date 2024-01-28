@@ -17,10 +17,13 @@
        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
        aria-current="true"
        aria-label="Slide 1"></button>
-     
+
    </div>
- 
+
    <!--Carousel items-->
+   @if ($sliderBanner->link)
+        <a href="{{$sliderBanner->link}}" target="_blank">
+   @endif
    <div
      class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
      <!--First item-->
@@ -33,18 +36,25 @@
          src="{{asset('images/slider/fb.jpg')}}"
          class="block w-full"
          alt="..." />
+         {{--  <img
+         src="{{ asset('storage/' . $sliderBanner->url_image) }}"
+         class="block w-full"
+         alt="..." />  --}}
        <div
          class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-         <h5 class="text-white font-bold -text-carrousel">Herón Pazzi</h5>
+         <h5 class="text-white font-bold -text-carrousel">{{$sliderBanner->title}}</h5>
          <p class="text-xl -text-carrousel">
-            Médico Veterinario Zootecnista, dedicado a la clínica y cirugía de perros y gatos. Ex académico de la FMVZ UNAM y de la FCN UAQ. Conferencista y amante de los perros y su bienestar.
+            {{$sliderBanner->description}}
          </p>
        </div>
      </div>
-     
- 
+
+
    </div>
- 
+    @if ($sliderBanner->link)
+        </a>
+    @endif
+
    <!--Carousel controls - prev item-->
    <button
      class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
@@ -96,14 +106,15 @@
      >
    </button>
  </div>
- 
-     <script type="module"> 
+
+
+     <script type="module">
              // Initialization for ES Users
          import {
          Carousel,
          initTE,
          } from "tw-elements";
- 
+
          initTE({ Carousel });
      </script>
      <!--- /Carrousel ---->

@@ -23,9 +23,9 @@ class SideMenu
                     'layout' => 'side-menu'
                 ],
             ],
-        
 
-   
+
+
             'categories' => [
                 'icon' => 'box',
                 'title' => 'Categorias',
@@ -36,7 +36,17 @@ class SideMenu
                     'layout' => 'side-menu'
                 ],
             ],
-        
+            'sliders' => [
+                'icon' => 'sliders',
+                'title' => 'Sliders',
+                'route_name' => 'admin.sliders',
+                'route_name_two' => 'admin.sliders.create',
+                'can' => 'Seccion Dashboard',
+                'params' => [
+                    'layout' => 'side-menu'
+                ],
+            ],
+
             'tags' => [
                 'icon' => 'tag',
                 'title' => 'Tags',
@@ -47,8 +57,8 @@ class SideMenu
                     'layout' => 'side-menu'
                 ],
             ],
-        
-      
+
+
             'blogs' => [
                 'icon' => 'newspaper',
                 'title' => 'Blogs',
@@ -59,8 +69,8 @@ class SideMenu
                     'layout' => 'side-menu'
                 ],
             ],
-        
-          
+
+
 
         ];
     }

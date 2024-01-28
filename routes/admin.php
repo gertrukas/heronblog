@@ -6,6 +6,8 @@ Route::get('dashboards', App\Http\Livewire\Admin\Dashboard\DashboardIndex::class
 
 Route::get('categories', App\Http\Livewire\Admin\Category\CategoryIndex::class)->name('admin.categories');
 
+Route::get('sliders', App\Http\Livewire\Admin\Slider\SliderIndex::class)->name('admin.sliders');
+
 Route::get('tags', App\Http\Livewire\Admin\Tag\TagIndex::class)->name('admin.tags');
 
 

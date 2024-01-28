@@ -13,6 +13,8 @@ class Slider extends Model
         'title',
         'description',
         'url_img',
+        'link',
+        'status',
     ];
 
 
@@ -34,7 +36,7 @@ class Slider extends Model
                 $query->where(
                     fn ($querySearch) =>
                     $querySearch->where('id', 'LIKE', "%$search%")
-                        ->orWhere('name', 'LIKE', "%$search%")
+                        ->orWhere('title', 'LIKE', "%$search%")
 
                 );
             }
