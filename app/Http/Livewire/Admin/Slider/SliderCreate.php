@@ -19,10 +19,10 @@ class SliderCreate extends Component
     public $slider;
 
     public $title;
-    public $description;
+    public $description = "";
     public $url_image;
-    public $link;
-    public $status;
+    public $link = null;
+    public $status = 0;
 
     public function edit($id = null)
     {
@@ -90,12 +90,8 @@ class SliderCreate extends Component
             'link' => 'nullable|url',
         ]);
 
-        if ($this->status) {
-            if ($this->status == 1) {
-                Slider::where('status', 1)->update(['status' => 0]);
-            }
-        }else{
-            $this->status = 0;
+        if ($this->status == 1) {
+            Slider::where('status', 1)->update(['status' => 0]);
         }
 
         if ($this->url_image) {

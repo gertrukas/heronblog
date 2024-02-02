@@ -32,40 +32,52 @@
         </div>
 
         <div class="modal-body">
-            <div class="grid grid-cols-2 gap-4 gap-y-3">
+            <div class="grid grid-cols-1 gap-4 gap-y-3">
                 <div>
                     <div>
-                        <label class="form-label">Titulo</label>
-                        <input type="text" class="form-control" placeholder="Titulo" wire:model.defer="title">
-                        <x-error property="title" />
-
-                    </div>
-
-                    <div>
-                        <label class="form-label">Descripción</label>
-                        <input type="text" class="form-control" placeholder="Descripción breve" wire:model.defer="description">
-                        <x-error property="description" />
-                    </div>
-
-                    <div>
-                        <label class="form-label mt-1">Link</label>
-                        <input class="form-check-input" type="checkbox" value="1" id="sliderCheckLink">
-                        <input type="text" class="form-control" placeholder="Link" wire:model.defer="link" id="sliderLinkInput" style="display: none">
-                        <x-error property="link" />
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <label class="form-label">Activo</label>
-                        <input class="form-check-input" type="checkbox" value="1" wire:model.defer="status">
+                        <label for="status" class="font-bold mb-1 text-gray-700 block">
+                            ¿Activo?
+                        </label>
+                        <div class="form-check form-switch w-full mb-4">
+                            <label class="form-check-label ml-0" for="show-example-1">No</label>
+                            <input id="show-example-1" wire:model.defer="status" data-target="#basic-button"
+                                class="show-code form-check-input mr-0 ml-3" type="checkbox" value="{{$status}}">
+                            <label class="form-check-label ml-2" for="show-example-1">Si</label>
+                        </div>
                         <x-error property="status" />
                     </div>
-                    <div class="mb-1" x-data="{ isUploading: @entangle('isUploading'), progress: 0 }" x-on:livewire-upload-start="isUploading = true"
+
+                    <div class="mt-4">
+                        <label class="font-bold mb-1 text-gray-700 block">Titulo</label>
+                        <input type="text" class="form-control" placeholder="Titulo" wire:model.defer="title">
+                        <x-error property="title" />
+                    </div>
+
+                    <div class="mt-4">
+                        <label for="description" class="font-bold mb-1 text-gray-700 block">
+                            Descripción
+                        </label>
+                        <div wire:ignore>
+                            <textarea wire:model="description" id="editor" name="description" class="form-control" cols="30" rows="10" data="@this"></textarea>
+                        </div>
+                        <x-error property="description" />
+
+                        <input type="hidden" class="uploadUrl">
+                    </div>
+
+                    <div class="mt-4">
+                        <label class="font-bold mb-1 text-gray-700 block">Link</label>
+                        <input class="form-check-input" type="checkbox" value="1" id="sliderCheckLink">
+                        <input type="text" class="form-control mt-1" placeholder="Link" wire:model.defer="link" id="sliderLinkInput" style="display: none">
+                        <x-error property="link" />
+                    </div>
+
+                    <div class="mt-4" x-data="{ isUploading: @entangle('isUploading'), progress: 0 }" x-on:livewire-upload-start="isUploading = true"
                         x-on:livewire-upload-finish="isUploading = true"
                         x-on:livewire-upload-error="isUploading = false"
                         x-on:livewire-upload-progress="progress = $event.detail.progress">
 
-                        <label class="form-label">Imagen</label>
+                        <label class="font-bold mb-1 text-gray-700 block">Imagen</label>
                         <div class="border-2 border-dashed dark:border-dark-5 rounded-md pt-4">
                             <div class="px-4 pb-4 flex items-center cursor-pointer relative dark:text-gray-500">
                                 <i data-feather="image" class="w-4 h-4 mr-2"></i> <span
@@ -100,6 +112,9 @@
     </div>
 
     @section('script')
+        
+        <script src="{{ asset('js/ckfile.js') }}"></script>
+
         <script>
             // Obtén referencias a los elementos del DOM
             const checkbox = document.getElementById('sliderCheckLink');
