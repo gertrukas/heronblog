@@ -12,7 +12,7 @@
 
 
     {{--     SLIDER --}}
-    <x-slider/>
+    <x-slider :sliderBanner="$sliderBanner"/>
     {{-- /SLIDER --}}
 
     <!-- bread crumb section -->

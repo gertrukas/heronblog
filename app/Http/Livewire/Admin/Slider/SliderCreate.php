@@ -90,8 +90,12 @@ class SliderCreate extends Component
             'link' => 'nullable|url',
         ]);
 
-        if ($this->status == 1) {
-            Slider::where('status', 1)->update(['status' => 0]);
+        if ($this->status) {
+            if ($this->status == 1) {
+                Slider::where('status', 1)->update(['status' => 0]);
+            }
+        }else{
+            $this->status = 0;
         }
 
         if ($this->url_image) {

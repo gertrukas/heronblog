@@ -17,8 +17,25 @@ class HomeController extends Controller
 
     public function index()
     {
+        $sliderBanners = Slider::all();
 
-        return view('front.home');
+        if (count($sliderBanners) == 0) {
+            $sliderBanner = [
+                'title' => 'Herón Pazzi',
+                'description' => 'Médico Veterinario Zootecnista, dedicado a la clínica y cirugía de perros y gatos. Ex académico de la FMVZ UNAM y de la FCN UAQ. Conferencista y amante de los perros y su bienestar.'
+            ];
+        }else{
+            $activeSliderBanner = $sliderBanners->where('status',1)->first();
+            if (!$activeSliderBanner) {
+                $sliderBanner = Slider::orderBy('id', 'desc')->first()->toArray();
+            }else{
+                $sliderBanner = $activeSliderBanner;
+            }
+        }
+
+        return view('front.home')->with([
+            'sliderBanner' => $sliderBanner,
+        ]);
     }
 
     public function bio()

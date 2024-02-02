@@ -21,8 +21,8 @@
    </div>
 
    <!--Carousel items-->
-   @if ($sliderBanner->link)
-        <a href="{{$sliderBanner->link}}" target="_blank">
+   @if (array_key_exists('link', $sliderBanner))
+        <a href="{{$sliderBanner['link']}}" target="_blank">
    @endif
    <div
      class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
@@ -32,26 +32,23 @@
        data-te-carousel-active
        data-te-carousel-item
        style="backface-visibility: hidden">
-       <img
-         src="{{asset('images/slider/fb.jpg')}}"
-         class="block w-full"
-         alt="..." />
-         {{--  <img
-         src="{{ asset('storage/' . $sliderBanner->url_image) }}"
-         class="block w-full"
-         alt="..." />  --}}
+        @if (array_key_exists('url_image', $sliderBanner))
+                <img src="{{ asset('storage/' . $sliderBanner['url_image']) }}" class="block w-full" alt="..." />
+        @else
+            <img src="{{asset('images/slider/fb.jpg')}}" class="block w-full" alt="..." />
+        @endif
        <div
          class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-         <h5 class="text-white font-bold -text-carrousel">{{$sliderBanner->title}}</h5>
+         <h5 class="text-white font-bold -text-carrousel">{{$sliderBanner['title']}}</h5>
          <p class="text-xl -text-carrousel">
-            {{$sliderBanner->description}}
+            {{$sliderBanner['description']}}
          </p>
        </div>
      </div>
 
 
    </div>
-    @if ($sliderBanner->link)
+    @if (array_key_exists('link', $sliderBanner))
         </a>
     @endif
 
