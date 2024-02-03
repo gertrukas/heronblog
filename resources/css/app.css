@@ -163,3 +163,8 @@
 
 @tailwind components;
 @tailwind utilities;
+
+.ck.ck-editor{
+    max-height: 400px !important;
+    overflow-y: auto;
+}
