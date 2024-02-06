@@ -65,11 +65,14 @@ class SliderIndex extends Component
 
     public function changeStatus($id)
     {
-        Slider::where('status', 1)->update(['status' => 0]);
 
         $slider = Slider::where('id', $id)->first();
         $slider->status = !$slider->status;
         $slider->save();
+        $slider->refresh();
+        if ($slider->status == 1) {
+            Slider::where('id', '!=' , $id)->update(['status' => 0]);
+        }
 
         $this->showSuccess('Se ha cambiado el estado con exito');
     }
