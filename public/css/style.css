@@ -46,3 +46,8 @@ nav{
 .-f3{ background: url("/images/acompanamiento-medico.jpg"); background-repeat: no-repeat; background-size: cover; }
 .-f4{ background: url("/images/conciencia-de-la-integracion.jpg"); background-repeat: no-repeat; background-size: cover; }
 .-f5{ background: url("/images/encuentro-familiar.jpg"); background-repeat: no-repeat; background-size: cover; }
+
+img {
+    width: 100%;
+    height: auto;
+}
