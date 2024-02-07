@@ -40,8 +40,6 @@ Route::get('/search', [SearchController::class, 'index']);
 Route::get('blogs', [BlogController::class, 'index'])->name('posts.index');
 Route::get('blogs/{slug}', [BlogController::class, 'show'])->name('posts.show');
 
-Route::get('blog/{slug}', [BlogController::class, 'show'])->name('posts.show');
-
 
 
 Route::view('quienes-somos', 'front/quienes-somos', ['title' => 'Quienes somos']);
@@ -49,8 +47,6 @@ Route::view('metodologia', 'front/metodologia', ['title' => 'Metodología']);
 Route::view('reserva-en-linea', 'front/reserva-en-linea', ['title' => 'Reserva en línea']);
 Route::view('contacto', 'front/contacto', ['title' => 'Contacto']);
 Route::view('aviso-de-privacidad', 'front/aviso', ['title' => 'Aviso de privacidad']);
-
-Route::view('suscribete', 'front/suscribete', ['title' => 'suscribete']);
 
 
 
