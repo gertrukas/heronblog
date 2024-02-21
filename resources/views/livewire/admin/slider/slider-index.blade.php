@@ -25,32 +25,29 @@
                         <x-table.th class="text-left" wire:click="sortBy('id')" :state="$this->sortingState">
                             Titulo
                         </x-table.th>
-                        <x-table.th class="text-left">Acciones</x-table.th>
+                        <x-table.th class="text-right">Acciones</x-table.th>
                     </x-slot>
 
                     <x-slot name="body">
                         @forelse ($datarows as $row)
                             <x-table.row wire:loading.class.delay="opacity-50" wire:key="row-{{ $row->id }}">
                                 <x-table.cell class="text-left">
-                                    <div class="flex justify-letext-left">
-                                        @if ($row->url_image)
-                                            <img src="{{ asset('storage/' . $row->url_image) }}"
-                                                class="h-16 w-40 rounded-md" class="">
-                                        @endif
-                                    </div>
+                                    @if ($row->url_image)
+                                        <img src="{{ asset('storage/' . $row->url_image) }}" class="w-20 h-20">
+                                    @endif
                                 </x-table.cell>
                                 <x-table.cell class="text-left">
                                     {{ $row->title }}
                                 </x-table.cell>
-                                <x-table.cell>
-                                    <div class="flex items-center justify-start">
+                                <x-table.cell class="text-right">
+                                    <div class="flex justify-end">
 
                                         @if ($row->status)
                                             <x-icon-button class="flex items-center cursor-pointer mr-6 text-green-500"
-                                                icon-name="check"  wire:click="changeStatus({{$row->id}})" />
+                                                icon-name="power-off"  wire:click="changeStatus({{$row->id}})" />
                                         @else
                                             <x-icon-button class="flex items-center cursor-pointer mr-6 text-red-500"
-                                                icon-name="x"  wire:click="changeStatus({{$row->id}})" />
+                                                icon-name="power-off"  wire:click="changeStatus({{$row->id}})" />
                                         @endif
 
                                         <x-icon-button class="flex items-center cursor-pointer mr-6 text-yellow-500 " icon-name="edit"
@@ -59,7 +56,7 @@
                                                 'slider': '{{ $row->id }}'
                                             }   )" />
 
-                                        <x-icon-button class="flex items-center text-red-500  cursor-pointer mr-6" icon-name="trash"
+                                        <x-icon-button class="flex items-center text-red-500  cursor-pointer" icon-name="trash"
                                              data-tw-toggle="modal"
                                             data-tw-target="#delete-modal-slider"
                                             @click="$dispatch('modal-get-delete', {{ $row->id }} ) " />

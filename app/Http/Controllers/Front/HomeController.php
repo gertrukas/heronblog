@@ -29,7 +29,7 @@ class HomeController extends Controller
             if (!$activeSliderBanner) {
                 $sliderBanner = Slider::orderBy('id', 'desc')->first()->toArray();
             }else{
-                $sliderBanner = $activeSliderBanner;
+                $sliderBanner = $activeSliderBanner->toArray();
             }
         }
 

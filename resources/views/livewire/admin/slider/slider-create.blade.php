@@ -112,7 +112,7 @@
     </div>
 
     @section('script')
-        
+
         <script src="{{ asset('js/ckfile.js') }}"></script>
 
         <script>

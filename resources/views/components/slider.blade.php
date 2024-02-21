@@ -41,7 +41,7 @@
          class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
          <h5 class="text-white font-bold -text-carrousel">{{$sliderBanner['title']}}</h5>
          <p class="text-xl -text-carrousel">
-            {{$sliderBanner['description']}}
+            {{strip_tags($sliderBanner['description'])}}
          </p>
        </div>
      </div>
