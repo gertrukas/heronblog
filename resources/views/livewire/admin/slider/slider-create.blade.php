@@ -82,7 +82,7 @@
                             <div class="px-4 pb-4 flex items-center cursor-pointer relative dark:text-gray-500">
                                 <i data-feather="image" class="w-4 h-4 mr-2"></i> <span
                                     class=" dark:text-gray-300 mr-1">Adjunta
-                                    un imagen</span>
+                                    un imagen (Formato png, jpg o jpeg 1240 x 798 resolución 72 dpi max 900kb) ¡Importante! Todas las imagenes deben del mismo tamaño)</span>
                                 <input type="file" wire:model="url_image" accept="images/*"
                                     class="w-full h-full top-0 left-0 absolute opacity-0 ">
                             </div>
