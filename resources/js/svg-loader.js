@@ -1,5 +1,6 @@
 (function (cash) {
     "use strict";
+    console.info( "svg-loader => ", cash );
     window.initializeSvgLoader = () => {
         let initSvgLoader = (function svgLoader(init) {
             cash(`[data-loading-icon]`).each(function () {
@@ -487,12 +488,15 @@
                     if (cash(this).data('loading-icon') == icon.name) {
                         cash(this).replaceWith(icon.svg)
                     }
-                })
+                });
+
+                console.info( "svg-loader => icons => ", icons );
             })
 
             return svgLoader
-        })()
+        })();
 
+        console.info( "svg-loader => initSvgLoader => ", initSvgLoader );
 
         $.fn.svgLoader = function () {
             initSvgLoader()
