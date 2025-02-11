@@ -5,15 +5,13 @@
         <!---- banner ------>
 
         <div class="flex items-center justify-center">
-
+            <img src="/images/fb.jpg">
         </div>
 
         <!---- /banner ------>
 
 
-    {{--     SLIDER --}}
-    <x-slider :sliderBanner="$sliderBanner"/>
-    {{-- /SLIDER --}}
+  
 
     <!-- bread crumb section -->
     <div class=" bg-P30 w-full h-10 text-white flex justify-start items-center  px-6">
