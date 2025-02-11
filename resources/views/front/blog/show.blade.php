@@ -10,32 +10,32 @@
         js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
         fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-        
+
 
     <div>
         <!-- bread crumb section -->
         <div class=" bg-P30 w-full h-10 text-white flex justify-start items-center  px-6">
-            <a href="/" class="-link-breadcrumb"> Inicio </a> / {{ $blog->name }} 
+            <a href="/" class="-link-breadcrumb"> Inicio </a> / {{ $blog->name }}
         </div>
         <!-- bread crumb section -->
-        
+
 
         <main class="container px-0 mx-auto w-full pb-4">
             <section class="w-full flex flex-col lg:flex-row gap-8">
-                
+
                 <section class="w-full lg:w-2/3 p-5">
                     <article>
-                        
+
                         <h1 class=""> {{ $blog->name }}</h1>
-                           
+
                         <figure class="">
                             <img src="{{ asset('uploads/' . $blog->image) }}" class="w-full object-contain rounded-md mb-2" alt="">
                         </figure>
 
-                        <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com --> 
+                        <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com -->
                         <div id="accordionExample" class=" bg-P30">
-                            
-                            
+
+
                             <div
                             class="mb-0">
                             <h2 class="accordion-header mb-0" id="headingThree">
@@ -81,7 +81,7 @@
                             </div>
                             </div>
                         </div>
-                        
+
                         <script>
                             // Initialization for ES Users
                             import {
@@ -91,25 +91,20 @@
 
                             initTE({ Collapse });
                         </script>
-                       
+
                         <div class="p-5 -articulo">
-                            <ul class="-articulo">
-                                <li>
-                                    <p>algo
-                                    </p>
-                                </li>
-                            </ul>
+
                             {!! $blog->description !!}
                         </div>
 
                         <div class="">
                             {{-- FACEBOOK --}}
-                            <div class="fb-like" 
-                                data-href="https://blogs.heronpazzi.com/blogs/{{ $blog->slug }}" 
-                                data-width="" 
-                                data-layout="" 
-                                data-action="" 
-                                data-size="" 
+                            <div class="fb-like"
+                                data-href="https://blogs.heronpazzi.com/blogs/{{ $blog->slug }}"
+                                data-width=""
+                                data-layout=""
+                                data-action=""
+                                data-size=""
                                 data-share="true">
                             </div>
                             {{-- FACEBOOK END --}}
@@ -117,10 +112,10 @@
 
                         {{-- WatssApp --}}
                         <div class="pt-1 pb-1"><a class="td-social-sharing-button td-social-sharing-button-js td-social-network td-social-whatsapp" href="https://api.whatsapp.com/send?text= checa este artículo {{ $blog->name }} %0A%0A https://heronpazzi.com/blogs/{!! $blog->slug !!}" title="WhatsApp" style="transition: opacity 0.2s ease 0s; opacity: 1;"><img src="{{asset("images/sociales/whatsapp.png")}}" width="30px" height="auto"></a></div>
-                        {{-- WhatsApp END --}} 
+                        {{-- WhatsApp END --}}
                     </article>
 
-                    {{-- Autor --}} 
+                    {{-- Autor --}}
                     <div class="w-2/3 lg:max-w-full lg:flex border-solid border-2 border-gray-200">
                         <div class="h-full lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center ">
                             <img src="{{ asset('images/heronpazzi.jpg') }}">
@@ -134,7 +129,7 @@
                         </div>
                       </div>
                       {{-- END autor --}}
-                    
+
 
                     <div  class="">
                         @include('includes.newsletter')
@@ -147,11 +142,11 @@
                     <div class="py-3">
                         <br>
 
-                        
+
                         <br>
                     </div>
                     @foreach ($blogAside as $item)
-                        
+
                             <article class="py-0 my-2">
                                 <figure class="mx-auto">
                                     <a href="{{ route('posts.show', $item->slug) }}" class=""><img src="{{ asset('uploads/' . $item->image) }}" class="w-full object-contain rounded-md py-0  my-1" width=""></a>
