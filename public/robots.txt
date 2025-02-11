@@ -1,6 +1,13 @@
 
 User-agent: *
-Disallow: 
+
 Disallow: /cgi-bin/
 Disallow: /admin/
+Disallow: /salud/
+Disallow: /page/
+Disallow: /perros/
+Disallow: /gatos/
+Disallow: /category/
+
+
 Sitemap: https://heronpazzi/sitemap.xml

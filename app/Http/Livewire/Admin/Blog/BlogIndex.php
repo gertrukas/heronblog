@@ -184,4 +184,5 @@ class BlogIndex extends Component
             'datarows' => $rows
         ]);
     }
+   
 }

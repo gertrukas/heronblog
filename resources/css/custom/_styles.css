@@ -1,6 +1,6 @@
 
 
-h1{ 
+h1{
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
     line-height: normal;
@@ -9,14 +9,15 @@ h1{
 
 h2{
     font-family: 'Montserrat', sans-serif;
-    font-size:1.25rem;
+    font-size: 2.0rem;
     line-height: normal;
     @apply text-titulo
+
 }
 
 h3{
     font-family: 'Montserrat', sans-serif;
-    @apply text-titulo text-2xl 
+    @apply text-titulo text-2xl
 }
 
 h4{
@@ -24,7 +25,7 @@ h4{
     @apply text-titulo font-semibold
 }
 
-h5{ 
+h5{
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
     line-height: normal;
@@ -57,16 +58,16 @@ nav li{
     @apply bg-P30  border-P30 font-semibold no-underline px-4
         text-white
         hover:text-P10
-        visited:text-white 
+        visited:text-white
         active:text-white;
- 
+
 }
 
 .-boton-azul{
     @apply bg-P30  border-P30 font-semibold no-underline
         text-white
-        hover:text-P10 hover:bg-white border 
-        visited:text-white 
+        hover:text-P10 hover:bg-white border
+        visited:text-white
         active:text-white  p-2;
 }
 
@@ -75,13 +76,8 @@ nav li{
 }
 
 .-link-titulo{
-    @apply text-titulo no-underline text-2xl font-semibold 
+    @apply text-titulo no-underline text-2xl font-semibold
 }
-
-.-titulo{
-    @apply py-4 pt-6 text-titulo
-}
-
 
 
 .-aviso{

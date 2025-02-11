@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('url_image');
             $table->string('link')->nullable();
-            $table->smallInteger('status')->default(0);
+            $table->smallInteger('status')->default(2);
             $table->timestamps();
         });
     }

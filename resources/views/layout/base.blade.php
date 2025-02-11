@@ -3,21 +3,16 @@
 <html lang="es">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HF4KHW6STF"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9881031305253297"
+         crossorigin="anonymous"></script>
 
-    gtag('config', 'G-HF4KHW6STF');
-    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    @include('includes.head')
 
 
-    
-    @include('includes.head') 
-
-    
 </head>
 <!-- END: Head -->
 

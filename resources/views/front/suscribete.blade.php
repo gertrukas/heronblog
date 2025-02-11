@@ -15,15 +15,15 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    .-suscribete{     
+    .-suscribete{
         height: 100vh;
-        padding: 40px;
+        padding: 10px;
         background-size: cover;
         background-position: center center;
 
         background-image: url("/images/perro-mujer.jpg");
     }
-   
+
 
 .-fdoAzul{
     margin:16px;
@@ -47,24 +47,26 @@
 
 <div class="-suscribete">
 
-    <div class="grid grid-cols-2 grid-rows-1 gap-5">
-        <div class="">
-            <div class="-fdoAzul">
-                <p class="text-white">⁠El blog <a href="http://heronpazzi.com">heronpazzi.com</a> está escrito por expertos en salud y bienestar animal. Ofrece información práctica sobre el cuidado de tu perro.
-                </p>
-            </div>
 
-            <div class="-fdoAzul">
-                <p  class="text-white">⁠Cada semana recibirás en tu correo electrónico un artículo que te ayudará a conocer y solventar las necesidades de tu perro. Obtendrás las herramientas para garantizar su salud, longevidad y calidad de vida.</p>
-            </div>
+      <section class="w-full flex flex-col lg:flex-row">
 
+        <div class="w-full lg:w-1/1 mx-auto">
+                <div class="-fdoAzul">
+                    <p class="text-white">El blog <a href="http://heronpazzi.com">heronpazzi.com</a> está escrito por expertos en salud y bienestar animal. Ofrece información práctica sobre el cuidado de tu perro.
+                    </p>
+                </div>
+
+                <div class="-fdoAzul">
+                    <p  class="text-white">⁠Cada semana recibirás en tu correo electrónico un artículo que te ayudará a conocer y solventar las necesidades de tu perro. Obtendrás las herramientas para garantizar su salud, longevidad y calidad de vida.</p>
+                </div>
 
         </div>
-        <div class="-fdoAzul">
 
-            
+        <div class="-fdoAzul w-full lg:w-1/1 mx-auto">
+
+
             <style>
-                #_form_1_ { font-size:14px; line-height:1.6; font-family:arial, helvetica, sans-serif; margin:0; }
+                #_form_1_ { font-size:14px; linese-height:1.6; font-family:arial, helvetica, sans-serif; margin:0; }
                 #_form_1_ * { outline:0; }
                 ._form_hide { display:none; visibility:hidden; }
                 ._form_show { display:block; visibility:visible; }
@@ -138,13 +140,13 @@
                   #_form_1_ button[type="submit"] { padding:20px; font-size:1.5em; }
                   #_form_1_ ._inline-style { margin:20px 0 0 !important; }
                 }
-                #_form_1_ { 
-                  position:relative; 
-                  text-align:left; 
-                  margin:25px auto 0; 
+                #_form_1_ {
+                  position:relative;
+                  text-align:left;
+                  margin:25px auto 0;
                   padding:20px; -webkit-box-sizing:border-box;
-                   -moz-box-sizing:border-box; 
-                   box-sizing:border-box; zoom:1; background:#219f94 !important; border:2px dashed #219f94 !important; max-width:500px; -moz-border-radius:15px !important; -webkit-border-radius:15px !important; border-radius:15px !important; color:#ebe2e2 !important; }
+                  -moz-box-sizing:border-box;
+                  box-sizing:border-box; zoom:1; background:#219f94 !important; border:2px dashed #219f94 !important; max-width:500px; -moz-border-radius:15px !important; -webkit-border-radius:15px !important; border-radius:15px !important; color:#ebe2e2 !important; }
                 #_form_1_._inline-form,#_form_1_._inline-form ._form-content,#_form_1_._inline-form input,#_form_1_._inline-form ._submit { font-family:"Lato", sans-serif; }
                 #_form_1_ ._form-title { font-size:22px; line-height:22px; font-weight:600; margin-bottom:0; }
                 #_form_1_:before,#_form_1_:after { content:" "; display:table; }
@@ -169,7 +171,7 @@
               </style>
               <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Roboto&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
               <link rel="stylesheet" type="text/css" href="https://unpkg.com/intl-tel-input@17.0.18/build/css/intlTelInput.min.css"/>
-              
+
               <form method="POST" action="https://heronpazzi.activehosted.com/proc.php" id="_form_1_" class="_form _form_1 _inline-form" novalidate>
                 <input type="hidden" name="u" value="1" />
                 <input type="hidden" name="f" value="1" />
@@ -180,14 +182,14 @@
                 <input type="hidden" name="v" value="2" />
                 <input type="hidden" name="or" value="b971449696a66d085a86bc38e9a55125" />
                 <div class="_form-content">
-                  
-                  
+
+
                   <div class="_form_element _x91813693 _full_width " >
                     <label for="firstname" class="_form-label">
                       Nombre*
                     </label>
                     <div class="_field-wrapper">
-                      <input type="text" id="firstname" name="firstname" placeholder="Escriba su nombre" required/>
+                      <input type="text" id="firstname" name="firstname" placeholder="Nombre" required/>
                     </div>
                   </div>
                   <div class="_form_element _x86040225 _full_width " >
@@ -195,7 +197,7 @@
                       Correo electrónico*
                     </label>
                     <div class="_field-wrapper">
-                      <input type="text" id="email" name="email" placeholder="Escriba su correo electrónico" required/>
+                      <input type="text" id="email" name="email" placeholder="Correo electrónico" required/>
                     </div>
                   </div>
                   <div class="_button-wrapper _full_width">
@@ -295,12 +297,12 @@
                 var _removed = false;
                 var form_to_submit = document.getElementById('_form_1_');
                 var allInputs = form_to_submit.querySelectorAll('input, select, textarea'), tooltips = [], submitted = false;
-      
+
                 var getUrlParam = function(name) {
                   var params = new URLSearchParams(window.location.search);
                   return params.get(name) || false;
                 };
-      
+
                 for (var i = 0; i < allInputs.length; i++) {
                   var regexStr = "field\\[(\\d+)\\]";
                   var results = new RegExp(regexStr).exec(allInputs[i].name);
@@ -310,7 +312,7 @@
                     allInputs[i].dataset.name = allInputs[i].name;
                   }
                   var fieldVal = getUrlParam(allInputs[i].dataset.name);
-      
+
                   if (fieldVal) {
                     if (allInputs[i].dataset.autofill === "false") {
                       continue;
@@ -324,7 +326,7 @@
                     }
                   }
                 }
-      
+
                 var remove_tooltips = function() {
                   for (var i = 0; i < tooltips.length; i++) {
                     tooltips[i].tip.parentNode.removeChild(tooltips[i].tip);
@@ -470,11 +472,11 @@
                   if(el.name === 'email' && el.value !== ""){
                     return true
                   }
-      
+
                   if((el.id == 'field[]' || el.id == 'ca[11][v]') && el.className.includes('phone-input-error')){
                     return true
                   }
-      
+
                   return false
                 };
                 var validate_form = function(e) {
@@ -537,7 +539,7 @@
                 };
                 addEvent(window, 'resize', resize_tooltips);
                 addEvent(window, 'scroll', resize_tooltips);
-      
+
                 var hidePhoneInputError = function(inputId) {
                   var errorMessage =  document.getElementById("error-msg-" + inputId);
                   var input = document.getElementById(inputId);
@@ -545,7 +547,7 @@
                   errorMessage.classList.add("phone-error-hidden");
                   input.classList.remove("phone-input-error");
                 };
-      
+
                 var initializePhoneInput = function(input, defaultCountry) {
                   return window.intlTelInput(input, {
                     utilsScript: "https://unpkg.com/intl-tel-input@17.0.18/build/js/utils.js",
@@ -555,7 +557,7 @@
                     preferredCountries: []
                   });
                 }
-      
+
                 var setPhoneInputEventListeners = function(inputId, input, iti) {
                   input.addEventListener('blur', function() {
                     var errorMessage = document.getElementById("error-msg-" + inputId);
@@ -574,11 +576,11 @@
                       }
                     }
                   });
-      
+
                   input.addEventListener("countrychange", function() {
                     iti.setNumber('');
                   });
-      
+
                   input.addEventListener("keydown", function(e) {
                     var charCode = (e.which) ? e.which : e.keyCode;
                     if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode !== 8) {
@@ -586,7 +588,7 @@
                     }
                   });
                 };
-      
+
                 var showPhoneInputError = function(inputId) {
                   var errorMessage =  document.getElementById("error-msg-" + inputId);
                   var input = document.getElementById(inputId);
@@ -594,8 +596,8 @@
                   errorMessage.classList.remove("phone-error-hidden");
                   input.classList.add("phone-input-error");
                 };
-      
-      
+
+
                 var _form_serialize = function(form){if(!form||form.nodeName!=="FORM"){return }var i,j,q=[];for(i=0;i<form.elements.length;i++){if(form.elements[i].name===""){continue}switch(form.elements[i].nodeName){case"INPUT":switch(form.elements[i].type){case"tel":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].previousSibling.querySelector('div.iti__selected-dial-code').innerText)+encodeURIComponent(" ")+encodeURIComponent(form.elements[i].value));break;case"text":case"number":case"date":case"time":case"hidden":case"password":case"button":case"reset":case"submit":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"checkbox":case"radio":if(form.elements[i].checked){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value))}break;case"file":break}break;case"TEXTAREA":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"SELECT":switch(form.elements[i].type){case"select-one":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break;case"select-multiple":for(j=0;j<form.elements[i].options.length;j++){if(form.elements[i].options[j].selected){q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].options[j].value))}}break}break;case"BUTTON":switch(form.elements[i].type){case"reset":case"submit":case"button":q.push(form.elements[i].name+"="+encodeURIComponent(form.elements[i].value));break}break}}return q.join("&")};
                 var form_submit = function(e) {
                   e.preventDefault();
@@ -611,12 +613,18 @@
                 };
                 addEvent(form_to_submit, 'submit', form_submit);
               })();
-      
+
             </script>
 
 
         </div>
-    </div>
+      </section>
+
+
+
+
+
+
     <div class="-fdoAzul">
         <p  class="text-white">Una vez que realices tu suscripción, te llegará un correo electrónico para que la confirmes. Si no lo visualizas, búscalo en la bandeja de spam y posteriormente arrastrarlo a la bandeja principal.</p>
     </div>
@@ -624,4 +632,4 @@
 </div>
 
 </body>
-</html> 
+</html>

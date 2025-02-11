@@ -9,10 +9,10 @@
             </div>
 
             <div class="w-full lg:w-1/2 flex justify-start flex-col align-top items-start p-4 pt-0 pb-0">
-                <h2 class="text-2xl font-semibold text-left">
+                <h3 class="text-2xl font-semibold text-left">
                     {{ $blog->name }}
                     
-                </h2>
+                </h3>
                 <p class="text-gray-500 text-left">
                    {{ $blog->date ? changeFormatDateApp($blog->date)->format('d-M-Y') : changeFormatDateApp($blog->created_at)->format('d-M-Y') }}
                 </p>

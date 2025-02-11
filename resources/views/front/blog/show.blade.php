@@ -18,11 +18,12 @@
             <a href="/" class="-link-breadcrumb"> Inicio </a> / {{ $blog->name }} 
         </div>
         <!-- bread crumb section -->
+        
 
         <main class="container px-0 mx-auto w-full pb-4">
             <section class="w-full flex flex-col lg:flex-row gap-8">
                 
-                <section class="w-full lg:w-2/3">
+                <section class="w-full lg:w-2/3 p-5">
                     <article>
                         
                         <h1 class=""> {{ $blog->name }}</h1>
@@ -91,7 +92,13 @@
                             initTE({ Collapse });
                         </script>
                        
-                        <div>
+                        <div class="p-5 -articulo">
+                            <ul class="-articulo">
+                                <li>
+                                    <p>algo
+                                    </p>
+                                </li>
+                            </ul>
                             {!! $blog->description !!}
                         </div>
 
